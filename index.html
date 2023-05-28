@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo de livros</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="styleLands.css" media="screen and (orientation:landscape)">
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-preto" onclick="fecharSobre()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="sobre-div">
+            <div id="btn-sobre-close" onclick="fecharSobre()"><span class="material-icons">close</span></div>
+            <p>Estes resumos foram feitos pela inteligência artificial ChatGPT, portanto não são de autoria própria. Por ser uma tecnologia nova e ainda em desenvolvimento, algumas informações podem estar incompletas ou incorretas. Quem quiser testar essa IA, esse é o link:</p>
+            <div id="link-chat">
+                <div id="chat-img" onclick="window.open('senhora-pdf.pdf', '_blank')"><img src="chatgpt-img.png"
+                        alt=""></a></div>
+                <a href="https://chat.openai.com" target="_blank">https://chat.openai.com </a><span class="material-icons"
+                        style="color: blue;">open_in_new</span>
+            </div>
+        </div>
+        <header>
+            <div id="btn-sobre" onclick="abrirSobre()"><span class="material-icons">question_mark</span></div>
+            <h1>Resumo de livros</h1>
+        </header>
+        <main>
+            <h2>9° ano</h2>
+            <h3>1° Bimestre</h3>
+            <ol class="ollivros">
+                <li class="lilivros" onclick="location.href='livros/por-do-sol/por-do-sol.html'">
+                    <a href="livros/por-do-sol/por-do-sol.html">Venha ver o pôr-do-sol - Lygia Fagundes Telles</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+            </ol>
+            <h3>2° Bimestre</h3>
+            <ol class="ollivros">
+                <li class="lilivros" onclick="location.href='livros/Mabata/mabata.html'">
+                    <a href="livros/Mabata/mabata.html">O dia em que explodiu Mabata bata - Mia Couto</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+                <li class="lilivros" onclick="location.href='livros/senhora/senhora.html'" rel="next">
+                    <a href="livros/senhora/senhora.html">Senhora - José de Alencar</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+            </ol>
+            <h3>3° Bimestre</h3>
+            <p>Resumos não disponíveis por enquanto.</p>                
+            <h3>4° Bimestre</h3>
+            <p>Resumos não disponíveis por enquanto.</p>                    
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="logoMWDt.png" alt="" id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
