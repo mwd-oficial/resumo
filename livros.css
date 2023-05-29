@@ -39,11 +39,10 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: #555;
-    border-radius: 2000px;
+    border-radius: 50px;
 }
 
 html, body {
-    overflow-x: hidden;
     width: 100vw;
 }
 
@@ -53,6 +52,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     text-align: justify;
     backdrop-filter: blur(10px);
     font-family: 'Kalam', cursive;
@@ -166,7 +166,7 @@ header {
 }
 
 #menu-div {
-    transform: translate(100vw, 0);
+    opacity: 0;
     margin: auto;
     display: flex;
     justify-content: center;

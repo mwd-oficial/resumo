@@ -32,14 +32,14 @@ function menu() {
         btnHome.style.boxShadow = "none"
         btnMenu.style.pointerEvents = "none"
         setTimeout(() => {
-            menuDiv.style.transform = "translate(0, 0)"
+            menuDiv.style.opacity = 1
         }, 1);
         setTimeout(() => {
             btnMenu.style.pointerEvents = "all"
         }, 500);
     } else if (menuIcon.innerHTML == "close"){
         menuIcon.innerHTML = "menu"
-        menuDiv.style.transform = "translate(100vw, 0)"
+        menuDiv.style.opacity = 0
         btnMenu.style.boxShadow = "5px 5px 10px 0px rgba(0, 0, 0, .5)"
         btnHome.style.boxShadow = "5px 5px 10px 0px rgba(0, 0, 0, .5)"
         btnMenu.style.pointerEvents = "none"
