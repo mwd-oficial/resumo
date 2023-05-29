@@ -47,12 +47,12 @@ html, body {
 }
 
 html {
+    overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
 }
 
 body {
-    overflow-x: hidden;
     text-align: justify;
     backdrop-filter: blur(10px);
     font-family: 'Kalam', cursive;
