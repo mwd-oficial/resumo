@@ -43,11 +43,11 @@
 }
 
 html, body {
+    overflow-x: hidden;
     width: 100vw;
 }
 
 html {
-    overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
 }
