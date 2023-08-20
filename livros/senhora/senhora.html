@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title>Senhora</title>
+    <style>
+        body {
+            background: url("senhora-img.png") center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        header.header-scroll {
+            background-image: linear-gradient(135deg, rgba(76, 65, 134, .75), rgba(92, 130, 162, .75));
+        }
+
+        @media screen and (max-width:1050px) {
+            header.header-scroll nav ul li {
+                background-image: linear-gradient(135deg, rgba(76, 65, 134, .75), rgba(92, 130, 162, .75));
+            }
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <header>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span>
+            </div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
+        </header>
+        <div id="divImg">
+            <img src="senhora-img.png" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o Livro Aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('senhora-pdf.pdf', '_blank')"><span
+                        class="material-icons">download</span></a></div>
+                <a href="senhora-pdf.pdf" target="_blank">Senhora - José de Alencar.pdf</a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <li><mark>Aurélia Camargo:</mark> A protagonista da história, uma jovem órfã que herda uma
+                        grande fortuna. Ela é determinada, inteligente e ambiciosa, buscando se vingar de seu
+                        ex-namorado abandonando-a por motivos financeiros.</li>
+                    <li><mark>Fernando Seixas:</mark> O ex-namorado de Aurélia, que a abandonou por não ter dinheiro
+                        suficiente para sustentar o casamento. Ele aceita a proposta de casamento de conveniência de
+                        Aurélia, mas ainda carrega sentimentos por Adelaide.</li>
+                    <li><mark>Adelaide:</mark> Prima de Aurélia, por quem Seixas é apaixonado. Ela também nutre
+                        sentimentos por ele, mas não é capaz de rejeitar a riqueza e o status que Aurélia oferece.</li>
+                    <li><mark>D. Firmina:</mark> Tia de Aurélia, que a cria desde a morte de seus pais. Ela é uma
+                        figura protetora e apoia a busca de Aurélia por independência e vingança.</li>
+                    <li><mark>Lemos:</mark> Advogado responsável pela administração da fortuna de Aurélia.</li>
+                    <li><mark>Pacheco:</mark> Amigo de Seixas e confidente de Aurélia.</li>
+                    <li><mark>Sá Coutinho:</mark> Homem rico e respeitável que se torna o pretendente de Aurélia
+                        após a morte de Seixas.</li>
+                    <li><mark>Generoso:</mark> Antigo pretendente de Aurélia, que é rejeitado por ela.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p>Aurélia, uma jovem órfã, herda uma grande fortuna e decide se vingar de seu ex-namorado, Fernando
+                    Seixas, que a abandonou por motivos financeiros. Ela propõe um casamento de conveniência a Seixas,
+                    oferecendo-lhe uma fortuna em dinheiro como dote. Seixas aceita, mas ainda está apaixonado por
+                    Adelaide, prima de Aurélia. Aurélia impõe condições rigorosas ao casamento, mantendo sua
+                    independência e controlando a situação. Ela se dedica a aumentar sua fortuna e se envolve em
+                    negócios, enquanto Seixas sofre com a falta de amor verdadeiro e a tristeza por não poder estar com
+                    Adelaide. Eventualmente, Seixas e Adelaide se reconciliam e decidem deixar Aurélia, o que
+                    desencadeia uma série de conflitos emocionais. No final, Aurélia e Seixas se reconciliam e descobrem
+                    o amor verdadeiro.</p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p>O livro é narrado em terceira pessoa por um narrador onisciente, que tem acesso aos pensamentos e
+                    sentimentos dos personagens, oferecendo insights sobre suas motivações e dilemas.</p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p>A história se passa no Rio de Janeiro do século XIX, retratando os costumes e a sociedade da época. O
+                    tempo abrange alguns anos, desde o momento em que Aurélia herda sua fortuna até os desdobramentos
+                    finais do enredo.</p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p>A maior parte da história se passa no Rio de Janeiro, uma cidade em pleno desenvolvimento durante o
+                    século XIX. Os cenários incluem casas luxuosas, festas sociais, negócios comerciais e a viagem de
+                    Aurélia, Seixas e Adelaide à cidade natal de Aurélia.</p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo Detalhado de Cada Capítulo:</h2>
+                <h3>Primeira parte: O preço</h3>
+                <ol>
+                    <li>
+                        <mark>Capítulo I: A apresentação de Aurélia:</mark>
+                        Aurélia Camargo, uma jovem órfã, é apresentada como a protagonista da história. Ela vive com sua
+                        tia, D. Firmina, e sua prima, Adelaide. Aurélia é descrita como uma jovem bonita e inteligente,
+                        cujo destino muda quando ela herda uma grande fortuna.
+                    </li>
+                    <li>
+                        <mark>Capítulo II: A proposta de casamento:</mark>
+                        Aurélia fica sabendo que seu antigo pretendente, Fernando Seixas, a rejeitou devido à falta de
+                        recursos financeiros. Determinada a se vingar e provar seu valor, Aurélia decide usar sua
+                        riqueza para conquistar um homem rico e respeitável. Ela elabora um plano para se aproximar de
+                        Seixas novamente.
+                    </li>
+                    <li>
+                        <mark>Capítulo III: O encontro casual:</mark>
+                        Aurélia e Seixas se encontram casualmente em uma festa e ela revela sua fortuna e intenção de se
+                        casar com um homem rico. Seixas, agora um homem falido e endividado, fica surpreso com a mudança
+                        na situação de Aurélia e se arrepende de tê-la abandonado.
+                    </li>
+                    <li><mark>Capítulo IV: A proposta de Aurélia:</mark>
+                        Aurélia propõe a Seixas um casamento de conveniência, oferecendo-lhe uma grande quantia em
+                        dinheiro como dote. Ela promete ajudá-lo a recuperar sua posição social e quitar suas dívidas.
+                        Seixas, ainda apaixonado por Adelaide, mas tentado pela perspectiva de riqueza, aceita a
+                        proposta.</li>
+                    <li><mark>Capítulo V: As condições do casamento:</mark>
+                        Aurélia estabelece condições rigorosas para o casamento. Ela proíbe qualquer contato físico
+                        entre eles e exige que Seixas não revele a verdadeira natureza do acordo a terceiros. Ela deseja
+                        manter sua independência e provar que pode controlar sua própria vida.
+
+                    </li>
+                    <li><mark>Capítulo VI: A vida após o casamento:</mark>
+                        Aurélia se dedica a aumentar sua fortuna através de investimentos e negócios. Ela se mostra uma
+                        mulher inteligente e determinada, alcançando sucesso financeiro e poder. Seixas, por sua vez,
+                        vive uma vida de isolamento e tristeza, angustiado pela falta de amor verdadeiro em seu
+                        casamento.</li>
+                    <li><mark>Capítulo VII: A amizade com Adelaide:</mark>
+                        Aurélia e Adelaide desenvolvem uma amizade próxima, enquanto Seixas continua apaixonado por
+                        Adelaide. Aurélia aproveita a oportunidade para mostrar a Seixas como Adelaide é encantadora,
+                        aumentando sua angústia por não poder estar com a mulher que ama.</li>
+                    <li><mark>Capítulo VIII: Os planos de vingança:</mark>
+                        Aurélia elabora planos para se vingar de Seixas e Adelaide. Ela os expõe a situações
+                        desconfortáveis e cria situações em que eles percebam o quanto a perderam. Aurélia usa sua
+                        riqueza e poder para mostrar seu domínio sobre eles.</li>
+                    <li><mark>Capítulo IX: A visita à cidade natal:</mark>
+                        Aurélia decide visitar sua cidade natal com Seixas e Adelaide. Lá, ela reencontra parentes
+                        distantes e antigos conhecidos, causando surpresa com sua riqueza e sucesso. Ela também se
+                        envolve em obras de caridade e ajuda os menos afortunados, demonstrando generosidade e bondade.
+                    </li>
+                    <li><mark>Capítulo X: A reconciliação de Seixas e Adelaide:</mark>
+                        Durante a viagem, Seixas e Adelaide têm a oportunidade de passar mais tempo juntos e reacender
+                        sua antiga paixão. Eles percebem que ainda se amam e decidem se afastar de Aurélia, mesmo que
+                        isso signifique enfrentar dificuldades financeiras.</li>
+                    <li><mark>Capítulo XI: A revelação de Seixas:</mark>
+                        Seixas, incapaz de continuar vivendo uma mentira, decide revelar a verdade sobre o casamento de
+                        conveniência a Adelaide. Ele conta a ela sobre a fortuna de Aurélia e como ele se sente preso
+                        nessa situação. Adelaide fica chocada e triste com a revelação.</li>
+                    <li><mark>Capítulo XII: O confronto entre Aurélia e Adelaide:</mark>
+                        Aurélia descobre a traição de Seixas e Adelaide e confronta Adelaide sobre suas intenções. Ela
+                        expressa sua decepção e amargura, sentindo-se traída por aqueles que ela considerava amigos
+                        próximos. A relação entre as duas mulheres se torna tensa e hostil.</li>
+                    <li><mark>Capítulo XIII: O sofrimento de Aurélia:</mark>
+                        Aurélia enfrenta uma crise emocional profunda. Ela percebe que conquistou sua riqueza e poder,
+                        mas perdeu a felicidade e o amor verdadeiro. Ela se sente solitária e desamparada, refletindo
+                        sobre suas escolhas e o preço que pagou por elas.</li>
+                    <h3>Segunda parte: Quitação</h3>
+                    <li><mark>Capítulo I: A solidão de Aurélia:</mark>
+                        Aurélia, em sua solidão, reflete sobre suas ações e o impacto que elas tiveram em sua vida. Ela
+                        se pergunta se valeu a pena conquistar riqueza e poder à custa de sua felicidade e
+                        relacionamentos pessoais.</li>
+                    <li><mark>Capítulo II: A busca de Aurélia:</mark>
+                        Aurélia decide buscar uma forma de redenção e felicidade verdadeira. Ela começa a questionar
+                        suas prioridades e a reconhecer que o dinheiro não pode trazer a plenitude que ela almeja. Ela
+                        anseia por um amor genuíno.</li>
+                    <li><mark>Capítulo III: A visita de Seixas:</mark>
+                        Seixas, sentindo-se culpado por suas ações e vendo o sofrimento de Aurélia, decide confrontar
+                        seus sentimentos e buscar uma reconciliação com ela. Ele expressa seu arrependimento e admiração
+                        pela força e inteligência de Aurélia, reconhecendo que ela é uma mulher extraordinária.</li>
+                    <li><mark>Capítulo IV: A resistência de Aurélia:</mark>
+                        Aurélia inicialmente resiste às tentativas de Seixas de se redimir. Ela guarda mágoa por suas
+                        ações passadas e hesita em abrir seu coração novamente. Ela teme ser magoada mais uma vez e se
+                        protege atrás de sua fortaleza emocional.</li>
+                    <li><mark>Capítulo V: A mudança de Aurélia:</mark>
+                        Gradualmente, Aurélia começa a perceber que seu amor por Seixas ainda existe. Ela reconhece sua
+                        própria necessidade de perdão e aceitação. Aurélia inicia um processo de transformação interior,
+                        aprendendo a valorizar o amor e a felicidade acima de suas ambições e riquezas.</li>
+                    <li><mark>Capítulo VI: A aceitação de Seixas:</mark>
+                        Seixas demonstra seu amor e arrependimento a Aurélia de maneira genuína. Ele acredita que eles
+                        podem construir um relacionamento baseado na sinceridade e no amor mútuo. Ele está disposto a
+                        deixar o passado para trás e construir um futuro juntos.</li>
+                    <li><mark>Capítulo VII: A reconciliação de Aurélia e Seixas:</mark>
+                        Aurélia finalmente aceita a proposta de reconciliação de Seixas. Ela reconhece que o amor
+                        verdadeiro é mais valioso do que qualquer riqueza material. Os dois encontram a paz e a
+                        felicidade em seu relacionamento, superando os desafios e dificuldades que enfrentaram.</li>
+                    <li><mark>Capítulo VIII: A redenção de Aurélia:</mark>
+                        Aurélia encontra a redenção e a plenitude em seu amor por Seixas. Ela percebe que o verdadeiro
+                        valor está nas conexões humanas e na busca pela felicidade autêntica. Aurélia se liberta das
+                        amarras de sua vingança e se entrega ao amor.</li>
+                    <li><mark>Capítulo IX: O desfecho:</mark>
+                        A história conclui com Aurélia e Seixas vivendo uma vida feliz e realizada juntos. Eles deixam
+                        para trás as mágoas do passado e constroem um futuro baseado no amor e na compreensão. Aurélia
+                        aprende a lição de que o verdadeiro poder está no coração e nas relações verdadeiras, não na
+                        riqueza material.</li>
+                    <h3>Terceira parte: Posse</h3>
+                    <li><mark>Capítulo I: A vida matrimonial de Aurélia e Seixas:</mark>
+                        Aurélia e Seixas desfrutam de sua vida matrimonial e se estabelecem em um relacionamento baseado
+                        no amor e na compreensão. Eles constroem uma casa e estabelecem uma vida familiar estável,
+                        cercados de afeto e respeito mútuo.</li>
+                    <li><mark>Capítulo II: Os desafios de ser uma "senhora":</mark>
+                        Aurélia enfrenta desafios em sua nova posição como esposa de um homem rico. Ela precisa aprender
+                        a se adaptar às expectativas da sociedade e lidar com a pressão social. Aurélia se esforça para
+                        equilibrar sua independência e ambição com o papel de uma esposa tradicional.</li>
+                    <li><mark>Capítulo III: A influência de Aurélia:</mark>
+                        Aurélia exerce sua influência sobre a sociedade carioca. Ela se envolve em causas sociais e
+                        caritativas, ajudando os menos afortunados. Sua posição de poder e riqueza lhe permite fazer
+                        mudanças significativas e impactar positivamente a vida das pessoas ao seu redor.</li>
+                    <li><mark>Capítulo IV: A maternidade de Aurélia:</mark>
+                        Aurélia descobre que está grávida e espera seu primeiro filho. Ela experimenta uma mistura de
+                        alegria e ansiedade em relação à maternidade. Ela se preocupa em equilibrar sua carreira, seu
+                        papel de mãe e suas responsabilidades sociais.</li>
+                    <li><mark>Capítulo V: Os dilemas morais de Aurélia:</mark>
+                        Aurélia enfrenta dilemas morais em relação a seu poder e riqueza. Ela questiona se está
+                        realmente fazendo a diferença na vida das pessoas ou se está apenas mascarando as desigualdades
+                        sociais. Aurélia luta com o desejo de encontrar um propósito maior em sua vida.</li>
+                    <li><mark>Capítulo VI: A busca pela felicidade verdadeira:</mark>
+                        Aurélia continua em sua busca pela felicidade verdadeira e pelo sentido de sua existência. Ela
+                        se questiona se a riqueza e o poder são suficientes para alcançar a plenitude. Aurélia busca uma
+                        conexão mais profunda consigo mesma e com o mundo ao seu redor.</li>
+                    <li><mark>Capítulo VII: O legado de Aurélia:</mark>
+                        Aurélia reflete sobre o legado que deseja deixar para o mundo. Ela busca maneiras de usar sua
+                        influência e riqueza para fazer mudanças duradouras na sociedade. Aurélia procura encontrar um
+                        equilíbrio entre suas ambições pessoais e seu desejo de fazer o bem.</li>
+                    <li><mark>Capítulo VIII: A maturidade de Aurélia:</mark>
+                        Aurélia amadurece ao longo do tempo, aprendendo importantes lições de vida. Ela percebe que a
+                        felicidade verdadeira não está na riqueza material, mas sim nas conexões humanas e na busca por
+                        um propósito maior. Aurélia se torna uma mulher sábia e compassiva.</li>
+                    <li><mark>Capítulo IX: O desfecho:</mark>
+                        A história de Aurélia chega ao seu desfecho com ela encontrando o equilíbrio entre suas ambições
+                        pessoais e seu papel na sociedade. Ela encontra a felicidade e a plenitude em suas conquistas,
+                        mas também aprende a valorizar as coisas simples da vida. Aurélia deixa um legado de bondade,
+                        generosidade e amor verdadeiro.</li>
+                    <h3>Quarta parte: Resgate</h3>
+                    <li><mark>Capítulo I: A partida de Aurélia:</mark> Aurélia decide partir em uma jornada em busca de
+                        sua verdadeira identidade e propósito na vida. Ela sente a necessidade de se reconectar consigo
+                        mesma e encontrar respostas para suas perguntas mais profundas. Deixa para trás sua vida
+                        confortável e se aventura em uma jornada de autodescoberta.</li>
+                    <li><mark>Capítulo II: Encontros pelo caminho:</mark> Durante sua jornada, Aurélia encontra
+                        diferentes pessoas e vive experiências transformadoras. Ela conhece pessoas de diferentes
+                        origens sociais e aprende com suas histórias e perspectivas. Esses encontros a ajudam a expandir
+                        seus horizontes e a compreender melhor a diversidade do mundo ao seu redor.</li>
+                    <li><mark>Capítulo III: A superação dos obstáculos:</mark> Aurélia enfrenta diversos desafios ao
+                        longo de sua jornada. Ela é testada em sua força interior, enfrentando dificuldades e
+                        adversidades. No entanto, ela se mostra resiliente e determinada, encontrando maneiras de
+                        superar os obstáculos e continuar em sua busca pela verdade e pelo significado da vida.</li>
+                    <li><mark>Capítulo IV: Os aprendizados de Aurélia:</mark> Ao longo de sua jornada, Aurélia aprende
+                        lições valiosas sobre si mesma e sobre o mundo. Ela descobre a importância da humildade, da
+                        empatia e do amor genuíno. Aprende a valorizar as coisas simples da vida e a encontrar alegria
+                        nos momentos cotidianos. Esses aprendizados transformam sua visão de mundo e moldam sua
+                        perspectiva de vida.</li>
+                    <li><mark>Capítulo V: A redescoberta de Aurélia:</mark> Após uma longa jornada, Aurélia finalmente
+                        se redescobre e encontra o equilíbrio interior que tanto buscava. Ela compreende seu propósito
+                        na vida e a importância de viver de acordo com seus valores e convicções. Aurélia se reconecta
+                        com seu verdadeiro eu e retorna ao seu lar renovada e com um novo sentido de plenitude.</li>
+                    <li><mark>Capítulo VI: O reencontro com Seixas:</mark> Aurélia reencontra Seixas, seu marido, após
+                        sua jornada de autodescoberta. Eles compartilham suas experiências e aprendizados, fortalecendo
+                        ainda mais seu vínculo afetivo. Aurélia e Seixas encontram uma nova sintonia em seu
+                        relacionamento, baseada na compreensão mútua e no apoio incondicional.</li>
+                    <li><mark>Capítulo VII: A construção de um novo caminho:</mark> Juntos, Aurélia e Seixas decidem
+                        construir um novo caminho em suas vidas. Eles utilizam os aprendizados e experiências adquiridos
+                        para fazer diferença na sociedade e ajudar aqueles que mais precisam. Aurélia e Seixas se
+                        dedicam a causas sociais e encontram maneiras de utilizar seus recursos e influência para criar
+                        um impacto positivo.</li>
+                    <li><mark>Capítulo VIII: A harmonia e o legado:</mark> Aurélia e Seixas alcançam uma harmonia em sua
+                        vida familiar e em suas realizações pessoais. Eles encontram um equilíbrio entre suas ambições
+                        individuais e suas responsabilidades sociais. Além disso, eles trabalham juntos para deixar um
+                        legado de bondade, generosidade e amor verdadeiro para as futuras gerações.</li>
+                    <li><mark>Capítulo IX: A plenitude de Aurélia:</mark> A história de Aurélia chega ao seu desfecho
+                        com ela encontrando a plenitude em sua vida. Ela vive em harmonia consigo mesma, com seu marido
+                        e com a sociedade ao seu redor. Aurélia compreende que a verdadeira riqueza reside nas relações
+                        humanas e no propósito de fazer o bem. Sua jornada de autodescoberta a transforma em uma mulher
+                        sábia, compassiva e realizada.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <p>"Senhora", de José de Alencar, é um romance que retrata a sociedade do século XIX, com ênfase nos
+                    temas do casamento por conveniência, ambição, vingança e busca pela felicidade. Vamos analisar
+                    diversos aspectos da obra.</p>
+                <p>Em termos de enredo, o livro apresenta uma trama envolvente e cheia de reviravoltas. A história gira
+                    em torno de Aurélia Camargo, uma jovem órfã que herda uma grande fortuna. Determinada a se vingar de
+                    seu antigo pretendente, Fernando Seixas, que a rejeitou por falta de recursos financeiros, Aurélia
+                    elabora um plano para conquistar um homem rico e respeitável. Ela propõe a Seixas um casamento de
+                    conveniência, oferecendo-lhe uma grande quantia em dinheiro como dote. Ao longo da trama, Aurélia
+                    utiliza sua riqueza e poder para se vingar de Seixas e Adelaide, a prima de Aurélia, expondo-os a
+                    situações desconfortáveis. No entanto, Aurélia percebe que conquistou sua fortuna e poder, mas
+                    perdeu a felicidade e o amor verdadeiro. Ela passa por uma transformação interior e busca a
+                    reconciliação com Seixas, reconhecendo a importância do amor e da felicidade acima de suas ambições
+                    materiais.</p>
+                <p>A obra apresenta uma reflexão profunda sobre os valores da sociedade da época. José de Alencar
+                    critica a busca desenfreada por riqueza e status social, mostrando que esses elementos não são
+                    suficientes para garantir a felicidade verdadeira. O autor também aborda a temática do papel da
+                    mulher na sociedade, mostrando como Aurélia, apesar de sua independência financeira, ainda é
+                    influenciada pelas convenções sociais e pela necessidade de um casamento.</p>
+                <p>Os personagens são bem desenvolvidos e complexos. Aurélia é retratada como uma mulher forte,
+                    inteligente e determinada, mas também enfrenta conflitos internos, buscando o verdadeiro amor e a
+                    realização pessoal. Seixas, por sua vez, é um personagem ambíguo, dividido entre seus sentimentos
+                    por Adelaide e sua tentação pela riqueza de Aurélia. Adelaide representa o papel da mulher
+                    tradicional da época, presa em um casamento infeliz. Outros personagens secundários e terciários,
+                    como D. Firmina, Lemos e Pacheco, contribuem para a trama e para a construção do ambiente social em
+                    que a história se desenrola.</p>
+                <p>A linguagem utilizada por José de Alencar é rica e poética, característica marcante de sua escrita.
+                    Ele descreve minuciosamente os cenários, os pensamentos e as emoções dos personagens, transportando
+                    o leitor para o contexto histórico e social do século XIX. Além disso, o autor utiliza recursos
+                    narrativos, como diálogos e monólogos internos, para explorar os conflitos internos dos personagens
+                    e transmitir suas reflexões mais íntimas.</p>
+                <p>No aspecto histórico, o livro oferece uma visão detalhada da sociedade do século XIX, retratando as
+                    relações sociais, os costumes, as convenções e as aspirações da época. Através da trama e dos
+                    personagens, José de Alencar revela as contradições e os dilemas morais da sociedade brasileira
+                    daquele período.</p>
+                <p>"Senhora" é uma obra importante da literatura brasileira, sendo considerada uma das precursoras do
+                    romance urbano no Brasil. Sua abordagem dos temas sociais, a profundidade psicológica dos
+                    personagens e a habilidade narrativa do autor contribuem para a relevância e o impacto duradouro do
+                    livro.</p>
+                <p>Em suma, "Senhora" é um romance que vai além da trama amorosa, explorando questões sociais e
+                    psicológicas em uma sociedade marcada por valores e convenções. A obra nos convida a refletir sobre
+                    a busca pela felicidade e o significado do verdadeiro amor em meio a um contexto de ambição e
+                    aparências.</p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>

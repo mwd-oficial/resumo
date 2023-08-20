@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title></title>
+    <style>
+        body {
+            background: url("") center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        header.header-scroll {
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75));
+        }
+
+        @media screen and (max-width:1050px) {
+            header.header-scroll nav ul li {
+                background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75));
+            }
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <header>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
+        </header>
+        <div id="divImg">
+            <img src="" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o livro aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('', '_blank')"><span
+                        class="material-icons">download</span></div>
+                <a href="" target="_blank"></a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <li><mark></mark></li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p></p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p></p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p></p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p></p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo detalhado de cada capítulo</h2>
+                <h3></h3>
+                <ol>
+                    <li>
+                        <mark></mark>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <p></p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>

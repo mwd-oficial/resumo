@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo de livros</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="shortcut icon" href="imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
+    <link rel="stylesheet" href="estilo/styleLands.css" media="screen and (orientation:landscape)">
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-preto" onclick="fecharSobre()"></div>
+    <div id="fundo-pretot" onclick="menuHeader()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="sobre-div">
+            <div id="btn-sobre-close" onclick="fecharSobre()"><span class="material-icons">close</span></div>
+            <p>Estes resumos foram feitos pela inteligência artificial ChatGPT, portanto não são de autoria própria. Por
+                ser uma tecnologia nova e ainda em desenvolvimento, algumas informações podem estar <strong>incompletas</strong> ou
+                <strong>incorretas</strong>. Quem quiser testar essa IA, esse é o link:</p>
+            <div id="link-chat">
+                <div id="chat-img" onclick="window.open('senhora-pdf.pdf', '_blank')"><img src="imagens/chatgpt-img.png"
+                        alt=""></a></div>
+                <a href="https://chat.openai.com" target="_blank">https://chat.openai.com </a><span
+                    class="material-icons" style="color: blue;">open_in_new</span>
+            </div>
+        </div>
+        <div id="btn-sobre" onclick="abrirSobre()"><span class="material-icons">question_mark</span></div>
+        <header id="header-index">
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <div id="btn-menu-header" onclick="menuHeader()"><span class="material-icons" id="menu-icon">menu</span>
+            </div>
+            <nav id="nav-anos">
+                <ul id="ul-anos">
+                    <li onclick="ulClick(0)"><a data-link="empty" class="zoom">6° Anos <span class="material-symbols-rounded seta" style="font-size: 40px;">arrow_drop_down</span></a>
+                        <ul class="uls">
+                            <li><a href="#bimid61" onclick="menuScroll()">1° Bimestre</a></li>
+                            <li><a href="#bimid62" onclick="menuScroll()">2° Bimestre</a></li>
+                            <li><a href="#bimid63" onclick="menuScroll()">3° Bimestre</a></li>
+                            <li><a href="#bimid64" onclick="menuScroll()">4° Bimestre</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="ulClick(1)"><a data-link="empty" class="zoom">7° Anos <span class="material-symbols-rounded seta" style="font-size: 40px;">arrow_drop_down</span></a>
+                        <ul class="uls">
+                            <li><a href="#bimid71" onclick="menuScroll()">1° Bimestre</a></li>
+                            <li><a href="#bimid72" onclick="menuScroll()">2° Bimestre</a></li>
+                            <li><a href="#bimid73" onclick="menuScroll()">3° Bimestre</a></li>
+                            <li><a href="#bimid74" onclick="menuScroll()">4° Bimestre</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="ulClick(2)"><a data-link="empty" class="zoom">8° Anos <span class="material-symbols-rounded seta" style="font-size: 40px;">arrow_drop_down</span></a>
+                        <ul class="uls">
+                            <li><a href="#bimid81" onclick="menuScroll()">1° Bimestre</a></li>
+                            <li><a href="#bimid82" onclick="menuScroll()">2° Bimestre</a></li>
+                            <li><a href="#bimid83" onclick="menuScroll()">3° Bimestre</a></li>
+                            <li><a href="#bimid84" onclick="menuScroll()">4° Bimestre</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="ulClick(3)"><a data-link="empty" class="zoom">9° Anos <span class="material-symbols-rounded seta" style="font-size: 40px;">arrow_drop_down</span></a>
+                        <ul class="uls">
+                            <li><a href="#bimid91" onclick="menuScroll()">1° Bimestre</a></li>
+                            <li><a href="#bimid92" onclick="menuScroll()">2° Bimestre</a></li>
+                            <li><a href="#bimid93" onclick="menuScroll()">3° Bimestre</a></li>
+                            <li><a href="#bimid94" onclick="menuScroll()">4° Bimestre</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="divH1">
+            <h1 id="h1-anima">Resumo de Livros</h1>
+        </div>
+        <main>
+            <h2>6° Ano</h2>
+            <h3 id="bimid61">1° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid62">2° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid63">3° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid64">4° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h2>7° Ano</h2>
+            <h3 id="bimid71">1° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid72">2° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid73">3° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid74">4° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h2>8° Ano</h2>
+            <h3 id="bimid81">1° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid82">2° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid83">3° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid84">4° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+            <h2>9° Ano</h2>
+            <h3 id="bimid91">1° Bimestre</h3>
+            <ol class="ollivros">
+                <li class="lilivros" onclick="location.href='livros/por-do-sol/por-do-sol.html'">
+                    <a href="livros/por-do-sol/por-do-sol.html">Venha ver o pôr-do-sol - Lygia Fagundes Telles</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+            </ol>
+            <h3 id="bimid92">2° Bimestre</h3>
+            <ol class="ollivros">
+                <li class="lilivros" onclick="location.href='livros/mabata/mabata.html'">
+                    <a href="livros/mabata/mabata.html">O dia em que explodiu Mabata bata - Mia Couto</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+                <li class="lilivros" onclick="location.href='livros/senhora/senhora.html'" rel="next">
+                    <a href="livros/senhora/senhora.html">Senhora - José de Alencar</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+            </ol>
+            <h3 id="bimid93">3° Bimestre</h3>
+            <!--<ol class="ollivros">
+                <li class="lilivros" onclick="location.href='livros/vidas-secas/vidas-secas.html'">
+                    <a href="livros/vidas-secas/vidas-secas.html">Vidas Secas - Graciliano Ramos</a>
+                    <span class="material-icons">open_in_new</span>
+                </li>
+            </ol>-->
+            <p>Resumos não disponíveis no momento.</p>
+            <h3 id="bimid94">4° Bimestre</h3>
+            <p>Resumos não disponíveis no momento.</p>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="imagens/logoMWDt.png" alt="" id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        var header = document.querySelector("#header-index")
+        var h1Anima = document.querySelector("#h1-anima")
+        var h1Header = document.querySelector("#h1-header")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            h1Anima.classList.toggle("h1-scroll", window.scrollY > 0)
+            if (window.scrollY > 0) {
+                h1Header.style.opacity = 1
+            } else {
+                h1Header.style.opacity = 0
+            }
+        })
+    </script>
+</body>
+
+</html>

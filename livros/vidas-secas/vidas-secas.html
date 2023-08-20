@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title>Senhora</title>
+    <style>
+        body {
+            background: url("vidas-secas-img.jpg") center center no-repeat fixed;
+            background-size: cover;
+        }
+        
+        header.header-scroll {
+            background-image: linear-gradient(135deg, rgba(197, 122, 17, .75), rgba(124, 58, 0, .75));
+        }
+
+        @media screen and (max-width:1050px) {
+            header.header-scroll nav ul li {
+                background-image: linear-gradient(135deg, rgba(197, 122, 17, .75), rgba(124, 58, 0, .75));
+            }
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <header>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
+        </header>
+        <div id="divImg">
+            <img src="vidas-secas-img.jpg" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o Livro Aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('vidas-secas-pdf.pdf', '_blank')"><span
+                        class="material-icons">download</span></a></div>
+                <a href="vidas-secas-pdf.pdf" target="_blank">Vidas Secas - Graciliano Ramos.pdf</a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <li><mark>Fabiano:</mark> O protagonista da história, é um vaqueiro nordestino que vive em extrema pobreza com sua família.</li>
+                    <li><mark>Sinhá Vitória:</mark> Esposa de Fabiano, uma mulher forte e dedicada, que enfrenta as dificuldades da vida com coragem.</li>
+                    <li><mark>O menino mais novo:</mark> Filho caçula do casal, uma criança frágil e sensível, que sofre com as condições precárias em que vivem.</li>
+                    <li><mark>O menino mais velho:</mark> Filho mais velho de Fabiano e Sinhá Vitória, é esperto e astuto, mas também enfrenta as dificuldades da vida no sertão.</li>
+                    <li><mark>A cachorra Baleia:</mark> Companheira fiel da família, uma cadela que também enfrenta as adversidades do sertão.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p>"Vidas Secas" conta a história da família de Fabiano, que vive em uma região árida e implacável do sertão nordestino, onde a seca é uma presença constante. Eles são nômades que vagueiam pelo sertão em busca de trabalho, enfrentando a fome, a sede e a opressão do ciclo de pobreza. O livro retrata suas lutas diárias para sobreviver, a luta contra a fome e a sede, além dos confrontos com patrões abusivos e a polícia.</p>
+                <p>O enredo mostra como os membros da família são afetados pela vida no sertão, suas aspirações e frustrações, a relação com a terra árida e as reflexões sobre sua condição humana. A narrativa é marcada pela crueza da realidade enfrentada pelos personagens, a falta de perspectiva e a busca por uma vida melhor.</p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p>A obra é narrada em terceira pessoa, por um narrador onisciente, que possui conhecimento completo dos pensamentos e sentimentos de todos os personagens. Essa perspectiva permite ao leitor entender melhor as motivações, os medos e as esperanças de cada membro da família.</p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p>O tempo da história é ambientado durante a década de 1930, em um período de seca severa que assolou o nordeste brasileiro.</p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p>O espaço da narrativa é o sertão nordestino, uma região árida, desolada e marcada pelas adversidades climáticas e sociais. A história se desenrola em diferentes lugares à medida que a família se move em busca de condições melhores de vida, mas o cenário predominante é de extrema pobreza, fome e sede, reforçando a dura realidade enfrentada pelos personagens.</p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo Detalhado de Cada Capítulo:</h2>
+                <h3></h3>
+                <ol>
+                    <li><mark>Capítulo I - Mudança:</mark> O livro começa com a descrição da família de Fabiano, composta por ele, sua esposa Sinhá Vitória, seus dois filhos e a cachorra Baleia. Eles estão se mudando devido à seca que assola o sertão nordestino. A família enfrenta as dificuldades da caminhada sob o sol escaldante e a falta de água e comida. Durante o percurso, eles conhecem um soldado que os trata com hostilidade, aumentando o sentimento de marginalização e desamparo.</li>
+
+                    <li><mark>Capítulo II - Fabiano: </mark>O capítulo apresenta um retrato da vida interior de Fabiano, suas inseguranças e suas limitações intelectuais. Ele sente-se inferiorizado em relação aos outros e tem medo da polícia, principalmente devido a uma experiência negativa do passado. A narrativa explora a complexidade do protagonista, revelando sua humanidade, apesar de sua aparência áspera.
+
+                    </li>
+                    <li><mark>Capítulo III - Cadeia:</mark> A família se instala em um novo local e tenta sobreviver. Porém, o dono da fazenda os trata mal e os explora, não lhes fornecendo alimentação suficiente nem condições adequadas de moradia. Por uma série de desentendimentos e equívocos, Fabiano e Sinhá Vitória acabam brigando com o patrão e ele ameaça chamar a polícia. Com medo da prisão, a família foge para evitar problemas maiores.</li>
+
+                    <li><mark>Capítulo IV - Sinhá Vitória:</mark> 
+                    O capítulo destaca a figura de Sinhá Vitória, uma mulher forte e corajosa que enfrenta as adversidades do sertão com determinação. Ela luta para proteger sua família e demonstra uma preocupação especial com o filho mais novo, cuidando dele com carinho e amor. A narrativa revela a força e a resiliência da mulher diante das condições adversas.</li>
+
+                    <li><mark>Capítulo V - O Menino Mais Novo:</mark> O capítulo é centrado no filho mais novo do casal. Ele é uma criança frágil e doente, que sofre com a seca e a fome. A falta de comida e a sede o deixam cada vez mais debilitado, e a família se preocupa com sua sobrevivência. A relação de afeto e proteção entre a mãe e o filho é enfatizada, ressaltando a maternidade em meio às dificuldades extremas.</li>
+
+                    <li><mark>Capítulo VI - O Menino Mais Velho:</mark> O filho mais velho é um garoto esperto e astuto. Ele demonstra inteligência e perspicácia ao lidar com as situações adversas do sertão. A narrativa retrata a relação entre os dois irmãos e como o menino mais velho tenta ajudar o irmão caçula, apesar das limitações e desafios que enfrentam.</li>
+                    <li><mark>Capítulo VII - Inverno:</mark> Com a chegada do inverno, a família enfrenta uma nova dificuldade: o frio. Eles lutam para se proteger das intempéries do clima e para encontrar abrigo adequado. A cachorra Baleia também sofre com o inverno rigoroso e se torna alvo da preocupação dos membros da família.</li>
+
+                    <li><mark>Capítulo VIII - Festa:</mark> O capítulo aborda a passagem da família por uma fazenda onde ocorre uma festa. Eles se aproximam do local, mas logo percebem que não são bem-vindos e se afastam. Fabiano observa a alegria e o conforto dos ricos, enquanto ele e sua família vivem na miséria. Essa comparação aumenta a sensação de exclusão e marginalização que eles enfrentam constantemente.</li>
+
+                    <li><mark>Capítulo IX - O Soldado Amarelo:</mark> A família encontra novamente o soldado que já haviam conhecido anteriormente, e ele os trata com hostilidade e desdém. Fabiano sente-se impotente e humilhado diante do soldado, evidenciando o abuso de poder e a violência a que são submetidos.</li>
+
+                    <li><mark>Capítulo X - O Mundo Coberto de Penas:</mark> A falta de comida e água leva a família a uma situação desesperadora. Eles encontram um grupo de aves mortas em uma poça seca e decidem cozinhá-las para saciar a fome. Fabiano reflete sobre a vida difícil e a falta de perspectiva, enquanto Sinhá Vitória busca algum alento no sofrimento diário.</li>
+
+                    <li><mark>Capítulo XI - Fuga:</mark> A família decide fugir da região onde estão, procurando uma vida melhor em outra localidade. Eles enfrentam mais dificuldades durante a jornada, mas mantêm a esperança de encontrar um lugar onde possam viver com dignidade. A narrativa encerra o livro com um clima de incerteza e continuidade da saga dessa família em busca de sobrevivência e um futuro mais promissor.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <p></p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>

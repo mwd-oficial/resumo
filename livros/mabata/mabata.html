@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title>O dia em que explodiu Mabata bata</title>
+    <style>
+        body {
+            background: url("mabata-img.png") center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        header.header-scroll {
+            background-image: linear-gradient(135deg, rgba(0, 219, 205, 0.75), rgba(0, 148, 138, 0.75));
+        }
+
+        @media screen and (max-width:1050px) {
+            header.header-scroll nav ul li {
+                background-image: linear-gradient(135deg, rgba(0, 219, 205, 0.75), rgba(0, 148, 138, 0.75));
+            }
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <header>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
+        </header>
+        <div id="divImg">
+            <img src="mabata-img.png" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o livro aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('mabata-pdf.pdf', '_blank')"><span
+                        class="material-icons">download</span></div>
+                <a href="mabata-pdf.pdf" target="_blank">O dia em que explodiu Mabata-bata - Mia Couto.pdf</a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <li><mark>Azarias</mark> - O pequeno pastor órfão que testemunha a explosão do boi Mabata-bata e
+                        decide fugir.</li>
+                    <li><mark>Mabata-bata</mark> - O grande boi malhado, chamado assim por seu tamanho e importância
+                        na manada.</li>
+                    <li><mark>Tio Raul</mark> - Dono da criação de bois e empregador de Azarias.</li>
+                    <li><mark>Avó Carolina</mark> - Avó de Azarias, preocupada com o paradeiro do neto e dos bois.
+                    </li>
+                    <li><mark>Soldados</mark> - Aparecem mais tarde na história em busca do pastor e para informar
+                        sobre minas espalhadas na região.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p>O enredo gira em torno da explosão misteriosa do boi Mabata-bata, presenciada por Azarias. Após o
+                    incidente, Azarias decide fugir, pois teme a reação de seu tio Raul, que esperava receber o boi como
+                    parte do lobolo (dote de casamento). Enquanto isso, Raul procura pelos bois desaparecidos e fica
+                    preocupado com o paradeiro de Azarias. A avó Carolina convence Azarias a voltar e ajudar a juntar os
+                    bois. No entanto, antes de retornarem, ocorre um evento surpreendente envolvendo a ave do relâmpago,
+                    ndlati.</p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p>A história é narrada em terceira pessoa, do ponto de vista externo aos personagens, utilizando uma
+                    linguagem descritiva e poética.</p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p>O tempo na história é indeterminado, não há uma referência explícita a uma época específica. O evento
+                    principal, a explosão do boi Mabata-bata, ocorre em um único dia. O tempo também é usado
+                    simbolicamente para representar a transformação e a passagem para um novo caminho na vida de
+                    Azarias.</p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p>A história se passa em uma área rural, provavelmente em Moçambique, onde Azarias trabalha como pastor
+                    para o tio Raul. O espaço é composto por campos, pastagens, montanhas e um rio que desempenha um
+                    papel significativo na história. A explosão do boi ocorre em uma área aberta, enquanto Azarias foge
+                    para as margens do rio.</p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo detalhado de cada capítulo</h2>
+                <p>Esse conto não possui capítulos, pois é muito é muito pequeno. Mas aqui está um resumo detalhado:</p>
+                <p>
+                    "O Dia em que Explodiu Mabata Bata" é um conto escrito por Mia Couto que narra a história de
+                    Azarias, um pequeno pastor que presencia um evento inexplicável e assustador. Em um certo dia, o boi
+                    Mabata-bata, o maior e mais imponente da manada, explode sem motivo aparente, deixando Azarias
+                    perplexo. O boi se desintegra em pedaços que caem no capim ao redor, transformando-se em borboletas
+                    vermelhas, ossos e moedas espalhadas.</p>
+                <p>Azarias, que trabalhava para seu tio Raul, dono da criação de gado, sente-se angustiado e teme as
+                    consequências da perda do boi, que estava destinado a ser uma oferta de casamento (lobolo) para o
+                    tio. Temendo a reação do tio e sentindo-se desamparado, Azarias decide fugir. Ele acredita que não
+                    há mais nada para ele naquele lugar, além de maus tratos e uma vida sem perspectivas.</p>
+                <p>Carregando apenas alguns pertences em um saco velho, Azarias parte em direção ao rio. Ele atravessa a
+                    fronteira da água e se posiciona na outra margem, esperando o que está por vir. Enquanto espera, a
+                    avó Carolina, preocupada com o paradeiro do pastor e temendo por sua segurança, vai até a casa de
+                    Raul e relata o desaparecimento de Azarias.</p>
+                <p>Na mesma noite, soldados aparecem na casa de Raul e informam sobre a explosão de uma mina causada por
+                    um boi. Eles procuram pelo pastor para obter informações sobre o incidente. Raul decide sair à
+                    procura de Azarias, mesmo diante dos riscos impostos pelas minas espalhadas pelos bandidos na
+                    região.</p>
+                <p>Raul encontra o rio e chama por Azarias, mas não obtém resposta. A avó Carolina, que o acompanha,
+                    decide intervir e chama o pastor. Para surpresa de Raul, Azarias aparece e revela que os bois estão
+                    próximos dele. Raul fica desconfiado e questiona se o pastor realmente reuniu o rebanho.</p>
+                <p>No final, Azarias confirma que juntou os bois. Raul, embora desconfiado, concorda com a situação,
+                    pois vê uma oportunidade de manter o pastor ajudando nos cuidados dos animais e permite que Azarias
+                    frequente a escola no próximo ano, como o menino desejava.</p>
+                <p>Enquanto isso, durante o encontro à beira do rio, há um clarão e um estrondo, como se fosse o
+                    meio-dia durante a noite. Azarias testemunha a descida da ave do relâmpago, o ndlati, que causa uma
+                    explosão de fogo e fumaça ao seu redor. O conto termina com Azarias abraçando a ave em sua chama,
+                    simbolizando um momento de transcendência e transformação.</p>
+                <p>"O Dia em que Explodiu Mabata Bata" é uma história misteriosa e simbólica, que aborda temas como o
+                    sobrenatural, a busca por liberdade e a conexão com a natureza.</p>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <div id="trecho">Raul achou melhor concordar com tudo, naquele momento. Depois, emendaria as ilusões do
+                    rapaz e voltariam as obrigações do serviço das pastagens.<br>
+                    — Fala lá o seu pedido.<br>
+                    — Tio: próximo ano posso ir na escola?<br>
+                    Já adivinhava. Nem pensar. Autorizar a escola era ficar sem guia para os bois. Mas o momento<br>
+                    pedia fingimento e ele falou de costas para o pensamento:<br>
+                    — Vais, vais.<br>
+                    — É verdade, tio?<br>
+                    — Quantas bocas tenho, afinal?<br>
+                    — Posso continuar ajudar nos bois. A escola só frequentamos da parte de tarde
+                </div>
+                <p>Neste trecho da história, onde Azarias faz o pedido a seu tio Raul para frequentar a escola no
+                    próximo ano, podemos observar uma crítica social relacionada ao trabalho infantil. A situação de
+                    Azarias, que já trabalha como pastor mesmo sendo uma criança, levanta questões sobre a falta de
+                    acesso à educação e a exploração do trabalho infantil em contextos rurais.</p>
+                <p>Essa crítica social se relaciona com a realidade de muitas crianças ao redor do mundo, especialmente
+                    em áreas rurais ou em comunidades com poucos recursos. O trabalho infantil priva as crianças de seus
+                    direitos fundamentais, como o direito à educação e o direito de desfrutar de uma infância saudável e
+                    plena. Ao destacar essa questão na história, o autor provoca uma reflexão sobre a importância da
+                    educação e os desafios enfrentados pelas crianças em situações de pobreza e falta de oportunidades.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>

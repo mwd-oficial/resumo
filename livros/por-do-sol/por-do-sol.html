@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title>Venha ver o pôr-do-sol</title>
+    <style>
+        body {
+            background: url("por-do-sol-img.jpg") center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        header.header-scroll {
+            background-image: linear-gradient(135deg, rgba(241, 221, 221, 0.75), rgba(212, 194, 194, 0.75));
+        }
+
+        @media screen and (max-width:1050px) {
+            header.header-scroll nav ul li {
+                background-image: linear-gradient(135deg, rgba(241, 221, 221, 0.75), rgba(212, 194, 194, 0.75));
+            }
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <header>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
+        </header>
+        <div id="divImg">
+            <img src="por-do-sol-img.jpg" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o Livro Aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('por-do-sol-pdf.pdf', '_blank')"><span
+                        class="material-icons">download</span></a></div>
+                <a href="por-do-sol-pdf.pdf" target="_blank">Venha ver o pôr-do-sol - Lygia Fagundes Telles.pdf</a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <li><mark>Raquel</mark>: Protagonista do conto, uma mulher sensível e introspectiva.</li>
+                    <li><mark>Ricardo</mark>: Antigo namorado de Raquel, um homem cruel e vingativo.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p>Raquel encontra-se com Ricardo em um cemitério abandonado, onde ele a convida a testemunhar um pôr-do-sol. Durante o encontro, eles relembram momentos do passado e revelam suas perspectivas sobre o relacionamento conturbado que tiveram. A tensão aumenta à medida que Raquel percebe a verdadeira intenção de Ricardo.</p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p>O conto é narrado em terceira pessoa, acompanhando os pensamentos e as percepções de Raquel.</p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p>A história se passa em um único dia, à tarde, durante o encontro de Raquel e Ricardo no cemitério abandonado. Também há flashbacks para momentos do relacionamento passado dos personagens.</p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p>A maior parte da história ocorre em um cemitério abandonado, onde Raquel e Ricardo se encontram para assistir ao pôr-do-sol. O ambiente sombrio e desolado contribui para a atmosfera carregada do conto.</p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo Detalhado de Cada Capítulo:</h2>
+                <p>Esse conto não possui capítulos, pois é muito é muito pequeno. Mas aqui está um resumo detalhado:</p>
+                <p>O conto "Venha Ver o Pôr-do-Sol" narra o encontro entre Raquel, uma mulher sensível e introspectiva, e seu antigo namorado, Ricardo, em um cemitério abandonado. O encontro é marcado por um clima tenso e sombrio, refletindo a natureza turbulenta do relacionamento passado entre os dois personagens.</p>
+                <p>Raquel concorda em encontrar-se com Ricardo para testemunhar um pôr-do-sol no cemitério. Durante o trajeto até o local, ela reflete sobre seu passado e sobre os motivos que a levaram a aceitar o convite. À medida que o sol começa a se pôr, Raquel é tomada por uma sensação de apreensão, uma vez que ela percebe a verdadeira intenção de Ricardo.</p>
+                <p>Ao longo do encontro, ambos relembram momentos do relacionamento conturbado que tiveram. Raquel revela suas inseguranças e sua necessidade de aprovação, enquanto Ricardo demonstra um comportamento cruel e vingativo. É revelado que ele trancou Raquel em uma capela abandonada e a deixou para morrer.</p>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <p>O conto "Venha Ver o Pôr-do-Sol" retrata o encontro entre Raquel e Ricardo, dois antigos namorados, em um cemitério abandonado. A história é contada em terceira pessoa, com o narrador relatando os eventos que ocorrem durante esse encontro.</p>
+                <p>O tema principal abordado no conto é a complexidade dos relacionamentos interpessoais, especialmente quando envolvem emoções intensas, ressentimentos e traumas do passado. O cemitério, um lugar simbolicamente associado à morte e ao passado, funciona como pano de fundo para o confronto entre os personagens e para a reflexão sobre suas histórias compartilhadas.</p>
+                <p>A narrativa revela as tensões e os conflitos não resolvidos entre Raquel e Ricardo, sugerindo a existência de um relacionamento marcado por momentos dolorosos e traumáticos. A autora utiliza uma linguagem descritiva para criar uma atmosfera densa e carregada de tensão, refletindo os sentimentos reprimidos e os segredos não revelados entre os personagens.</p>
+                <p>Ao longo do conto, o leitor percebe a existência de ressentimentos profundos entre Raquel e Ricardo, indicando que o relacionamento entre eles terminou de forma conturbada e dolorosa. A troca de diálogos ácidos e o confronto emocional revelam mágoas antigas, culpas e arrependimentos.</p>
+                <p>O conto também aborda a temática da passagem do tempo e do impacto das escolhas feitas na vida. Raquel e Ricardo representam duas trajetórias divergentes: Raquel buscou superar suas angústias e seguir em frente, enquanto Ricardo parece ter se afundado em um ciclo de ressentimento e infelicidade.</p>
+                <p>A partir dessa análise, percebemos que "Venha Ver o Pôr-do-Sol" explora a complexidade das relações humanas, os traumas e ressentimentos do passado, bem como as consequências das escolhas feitas ao longo da vida. A história oferece uma reflexão sobre a dificuldade de superar mágoas e a necessidade de confrontar os sentimentos reprimidos para alcançar a reconciliação e o crescimento pessoal.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>
