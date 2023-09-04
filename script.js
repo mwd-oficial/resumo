@@ -4,7 +4,7 @@ function inicia() {
         carregando.style.display = "none"
         conteudo.style.display = "block"
     }, 500);
-}
+}seta
 
 var sobreDiv = document.querySelector("#sobre-div")
 var fundoPreto = document.querySelector("#fundo-preto")

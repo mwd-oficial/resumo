@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title>Rosa Caramela</title>
+    <style>
+        body {
+            background: url("rosa-caramela.jpg") center center no-repeat fixed;
+            background-size: cover;
+        }
+
+        header.header-scroll {
+            background-image: linear-gradient(135deg, rgba(30, 30, 100, .75), rgba(50, 120, 255, .75));
+        }
+
+        @media screen and (max-width:1050px) {
+            header.header-scroll nav ul li {
+                background-image: linear-gradient(135deg, rgba(30, 30, 100, .75), rgba(50, 120, 255, .75));
+            }
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <header>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
+        </header>
+        <div id="divImg">
+            <img src="rosa-caramela.jpg" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o livro aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('rosa-caramela-mia-couto.pdf', '_blank')"><span
+                        class="material-icons">download</span></div>
+                <a href="rosa-caramela-mia-couto.pdf" target="_blank">Rosa Caramela - Mia Couto.pdf</a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <li><mark>Rosa Caramela:</mark> Uma mulher corcunda e excêntrica, conhecida pelo apelido "Rosa Caramela." Ela é o foco principal da história, uma figura misteriosa e solitária que tem uma conexão profunda com estátuas e uma história de decepção amorosa.
+                         
+                    <li><mark>O Noivo:</mark>Um homem não nomeado que foi noivo de Rosa Caramela, mas que a abandonou antes do casamento, desencadeando uma série de eventos na vida de Rosa.</li>
+                    <li><mark>O Pai:</mark>O pai do narrador, um homem tranquilo e observador que se torna um personagem importante no final da história quando reencontra Rosa Caramela.</li>
+                    <li><mark>O Tio:</mark>O tio do narrador, que traz notícias sobre o que aconteceu com Rosa Caramela após sua prisão.</li>
+                    <li><mark>Jawane:</mark>Um enfermeiro cujo enterro é mencionado na história, e que tem um impacto indireto na vida de Rosa Caramela.</li>
+                    <li><mark>Personagens Secundários:</mark>A multidão no enterro de Jawane, as vendedoras no bazar onde a mãe do narrador trabalha e outras pessoas da comunidade que interagem com Rosa Caramela.</li></li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p>A história gira em torno da vida misteriosa e isolada de Rosa Caramela, uma mulher corcunda apelidada por esse nome pelos habitantes da região. Ela é conhecida por sua estranha relação com estátuas e por uma decepção amorosa que a deixou marcada. A narrativa segue a trajetória de Rosa Caramela, desde sua juventude até sua prisão por venerar uma estátua colonialista. Após ser libertada, ela volta à sua comunidade, e a história culmina em um encontro emocionante entre ela e o pai do narrador.</p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p>O narrador é uma voz observadora da comunidade em que Rosa Caramela vive. Embora não seja um personagem central, ele compartilha as histórias e eventos relacionados a Rosa e sua família.</p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p>A história se desenrola em um período não especificado, mas sugere-se que seja em um contexto histórico pós-colonial, em uma comunidade rural ou pequena cidade.</p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p>A história se passa em uma comunidade não identificada, com destaque para a casa de Rosa Caramela, o bazar onde a mãe do narrador trabalha, o cemitério local e a casa do narrador. Cada um desses lugares desempenha um papel na história, revelando diferentes aspectos da vida de Rosa Caramela e da comunidade em que ela vive.</p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo detalhado de cada capítulo</h2>
+                <p>A história gira em torno de Rosa Caramela, uma mulher corcunda e excêntrica, que é apelidada assim por sua comunidade desde a infância. Ela é uma figura enigmática que não se encaixa nos padrões sociais, mas que exerce um fascínio sobre as pessoas ao seu redor.</p>
+                <p>Rosa Caramela tem uma história de vida marcada pela solidão e pela rejeição. Seu nome original não lhe servia, então a comunidade a renomeou como Rosa Caramela, e ela acabou aceitando essa nova identidade. Sua corcunda era uma mistura de raças, e sua família a abandonou quando ela era jovem, deixando-a viver em um casebre de pedra improvisado.</p>
+                <p>A casa de Rosa Caramela não tinha móveis, e ela vivia uma existência solitária, sem comida aparente e poucos olhares em sua direção. A única exceção era quando ela saía para passear nos jardins e falava com estátuas. Essa era sua única atividade visível, e as conversas que mantinha com as estátuas assustavam as pessoas, pois ela parecia colocar alma nas pedras e querer curá-las.</p>
+                <p>Ela tinha um rosto bonito, mas sua corcunda a tornava diferente, e quando as pessoas a viam inteira, sua beleza se anulava. Ela era vista vagando nos jardins, conversando com estátuas e tentando curar as cicatrizes delas. À noite, a lua se agarrava a ela como uma moeda avarenta, e ela cantava para as estátuas, pedindo que saíssem das pedras.</p>
+                <p>A comunidade a esquecia durante o dia, mas à noite o luar revelava sua presença torta. Nos domingos, ela se recolhia, afastando-se das multidões que enchiam os jardins.</p>
+                <p>A história de Rosa Caramela é marcada por uma decepção amorosa. Ela tinha sonhado com um casamento extravagante, mas seu noivo a abandonou no dia da cerimônia. Ele tinha pedido uma cerimônia simples, mas Rosa queria a festa dos sonhos. O noivo nunca apareceu, e Rosa ficou esperando por ele durante horas. Esse evento a deixou emocionalmente perturbada, e ela acabou sendo internada em um hospital psiquiátrico.</p>
+                <p>Após receber alta, Rosa Caramela desenvolveu uma ligação especial com estátuas, cuidando delas com amor e reverência. Sua estátua favorita estava em frente à casa do narrador. Ela conversava com as estátuas, as vestia e cuidava delas, como se tentasse preencher o vazio em sua própria vida.</p>
+                <p>A história se desenrola com a prisão de Rosa Caramela, acusada de venerar um colonialista, o que era considerado saudosismo do passado pelo chefe das milícias locais. Ela é libertada mais tarde, quando a prisão é inspecionada, e seu único "crime" é ser considerada louca.</p>
+                <p>No final da história, a comunidade se surpreende ao descobrir que Rosa Caramela retornou e está de volta à sua casa. Ela e o pai do narrador têm um encontro emocional, e Rosa Caramela é vista pela última vez em um momento de intimidade com aquele que a abandonara antes, agora reconciliados.</p>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <ol>
+                    <li><mark>Isolamento e Diferença:</mark>Rosa Caramela é uma personagem central que representa a diferença e o isolamento. Sua corcunda a torna visivelmente diferente dos outros, e essa diferença a isola da sociedade. Mia Couto explora como a sociedade frequentemente marginaliza e rejeita aqueles que são diferentes, especialmente aqueles que não se encaixam nos padrões convencionais de beleza ou comportamento.</li>
+                    <li><mark>Rejeição e Decepção Amorosa:</mark>A história de Rosa Caramela é marcada por uma profunda rejeição e decepção amorosa. Seu noivo a abandonou no dia do casamento, o que a deixou emocionalmente perturbada. Esse evento desencadeia uma série de eventos que a levam a sua internação em um hospital psiquiátrico e à sua conexão com estátuas. A rejeição amorosa de Rosa Caramela destaca a crueldade do abandono e como isso pode afetar profundamente a psicologia de uma pessoa.</li>
+                    <li><mark>Ligação com Estátuas:</mark>A relação de Rosa Caramela com as estátuas é um elemento simbólico importante na história. Ela cuida das estátuas, conversa com elas e tenta "curá-las" das cicatrizes que carregam. Essa ligação simboliza sua busca por amor e compreensão, bem como seu desejo de preencher o vazio em sua própria vida. As estátuas representam a imobilidade e a ausência de vida, contrastando com a busca de Rosa por conexão e significado.</li>
+                    <li><mark>Loucura e Estigmatização:</mark>A sociedade em que Rosa Caramela vive a considera louca, e ela é internada em um hospital psiquiátrico. A história sugere que a loucura é relativa e que a comunidade muitas vezes rotula as pessoas como loucas quando não entendem ou temem suas diferenças. A estigmatização da loucura é um tema subjacente que levanta questões sobre a tolerância e a compaixão em relação àqueles que sofrem de problemas de saúde mental.</li>
+                    <li><mark>Redenção e Reconciliação:</mark>O final da história é marcado por um encontro emocional entre Rosa Caramela e o pai do narrador. Essa cena simboliza uma espécie de redenção para Rosa, onde ela encontra um momento de conexão e compaixão. É também um lembrete de que mesmo aqueles que são marginalizados pela sociedade têm uma necessidade profunda de pertencimento e amor.</li>
+                    <li><mark>Estilo Literário:</mark>A narrativa de Mia Couto é caracterizada por seu estilo literário poético e lírico. Ele usa a linguagem de forma figurativa e metafórica, criando imagens vívidas que evocam emoções intensas. Sua prosa poética contribui para a atmosfera mágica e misteriosa da história.</li>
+                </ol>
+                <p>Em resumo, "Rosa Caramela" é uma história envolvente que aborda questões profundas da condição humana por meio de personagens complexos e simbolismo habilmente construído. Mia Couto explora a solidão, a rejeição, a busca de sentido e a capacidade de encontrar compaixão, mesmo nas circunstâncias mais incomuns. É uma narrativa que ressoa com as emoções e a humanidade de seus personagens.</p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>
