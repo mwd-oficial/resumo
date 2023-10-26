@@ -14,11 +14,10 @@
 }
 
 :root {
-    --cor-header: linear-gradient(135deg, rgba(134, 110, 86, .75), rgb(213, 198, 181, .75));
     --link-color: #00f;
     --h2-color: yellow;
     --h3-color: rgb(0, 255, 0);
-    --strong-color: #0ff;  
+    --strong-color: #0ff;
     --lista-livros-color: #ddd;
     --lista-livros-color-hover: #eee;
 }
@@ -128,7 +127,7 @@ body {
 #btn-sobre {
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,10 +135,9 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
     cursor: pointer;
     transition: .5s;
-    float: right;
     z-index: 2;
 }
 
@@ -195,13 +193,13 @@ body {
     gap: 10px;
 }
 
-#link-chat a{
+#link-chat a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#link-chat:hover a{
+#link-chat:hover a {
     text-decoration: underline;
 }
 
@@ -229,9 +227,9 @@ header {
     top: 0;
     width: 100vw;
     padding: 0 25px;
-    min-height: 66px;
+    min-height: 45px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 50;
     transition-duration: .5s;
@@ -250,11 +248,11 @@ header ul li {
     margin: 0;
 }
 
-header > nav > ul > li > a, header.header-scroll > nav > ul > li > a {
+header>nav>ul>li>a, header.header-scroll>nav>ul>li>a {
     border-radius: 15px;
 }
 
-header ul li a, header ul li a:visited, header ul li a:active  {
+header ul li a, header ul li a:visited, header ul li a:active {
     color: #000;
     font-size: 1.1em;
     padding: 20px 26px;
@@ -293,9 +291,11 @@ header ul li ul {
 header ul li ul li:nth-child(1) {
     border-radius: 20px 20px 0px 0px;
 }
+
 header.header-scroll ul li ul li:nth-child(1), header.header-scroll ul li ul li a:nth-child(1) {
     border-radius: 0px;
 }
+
 header ul li ul li:last-child, header.header-scroll ul li ul:last-child, header.header-scroll ul li ul li:last-child {
     border-radius: 0px 0px 20px 20px;
 }
@@ -323,34 +323,68 @@ header ul li:before {
     display: none;
 }
 
-header.header-scroll #btn-menu-header {
-    background-color: transparent;
+header.header-scroll ~ #progresso-circle #btn-menu-header, header.header-scroll ~ #progresso-bar #btn-menu-header {
+    background-image: linear-gradient(135deg, var(--cor-header));
     box-shadow: none;
-    border-radius: none;
-} 
+}
+
+#progresso-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    max-width: 100vw;
+    background-color: var(--cor-progresso);
+    display: none;
+}
+
+#progresso-circle {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+#circular-chart {
+    position: absolute;
+    display: block;
+    max-width: 75px;
+    max-height: 75px;
+}
+
+#circle {
+    fill: none;
+    stroke: var(--cor-progresso);
+    stroke-width: 3.8;
+    stroke-dasharray: 0, 100;
+}
 
 #btn-menu-header {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
     cursor: pointer;
     transition: .5s;
-    float: right;
     z-index: 2;
-    display: none
+    display: none;
 }
+
 @media screen and (max-width: 975px) {
     header ul li a:hover span, header ul li a:not(:hover) span, header ul li a:hover {
         transform: none;
     }
-    
+
     #nav-anos {
         display: none;
     }
@@ -362,9 +396,13 @@ header.header-scroll #btn-menu-header {
     header nav {
         position: absolute;
         width: 100vw;
-        top: 57px;
+        top: 0px;
         left: 0;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+    }
+    
+    header.header-scroll nav {
+        top: 45px;
     }
 
     header nav ul li {
@@ -373,15 +411,15 @@ header.header-scroll #btn-menu-header {
     }
 
     header ul li ul li:nth-child(1) {
-    border-radius: 0px;
-}
+        border-radius: 0px;
+    }
 
     header ul li ul li:last-child, header.header-scroll ul li ul:last-child, header.header-scroll ul li ul li:last-child {
         border-radius: 0px;
     }
 
     header.header-scroll nav ul li {
-        background-image: var(--cor-header);
+        background-image: linear-gradient(135deg, var(--cor-header));
     }
 
     header nav ul li ul li {
@@ -394,7 +432,7 @@ header.header-scroll #btn-menu-header {
         width: 100%;
         left: 0;
     }
-    
+
     header ul li:hover ul {
         display: none;
     }
@@ -455,13 +493,13 @@ header.header-scroll ul li ul li {
 }
 
 header.header-scroll {
-    background-image: var(--cor-header);
+    background-image: linear-gradient(135deg, var(--cor-header));
     backdrop-filter: blur(10px);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 }
 
-header.header-scroll ul li ul { 
-    background-image: var(--cor-header);
+header.header-scroll ul li ul {
+    background-image: linear-gradient(135deg, var(--cor-header));
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 }
 
@@ -474,12 +512,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    text-shadow: 
-               -2px -2px 0px #000, 
-               -2px 2px 0px #000,                    
-                2px -2px 0px #000,                  
-                2px 2px 0px #000,
-                0px 0px 20px #000;
+    text-shadow:
+        -2px -2px 0px #000,
+        -2px 2px 0px #000,
+        2px -2px 0px #000,
+        2px 2px 0px #000,
+        0px 0px 20px #000;
     text-align: center;
     margin: 20px 0px;
     color: var(--h2-color);
@@ -488,7 +526,7 @@ h2 {
     font-weight: bolder;
     text-transform: uppercase;
     font-style: italic;
-    
+
 }
 
 h3 {
@@ -516,16 +554,16 @@ section {
 li {
     margin-bottom: 20px;
     position: relative;
-  }
-  
-  li::before {
+}
+
+li::before {
     content: counter(li) ".";
     counter-increment: li;
     font-size: 25px;
     color: #777777;
     position: absolute;
     left: -25px;
-  }
+}
 
 .ollivros {
     display: flex;
@@ -572,18 +610,21 @@ a {
     text-decoration: none;
     color: var(--link-color);
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 a:active {
     color: var(--link-color);
 }
+
 a:visited {
     color: var(--link-color);
 }
 
 footer {
-    padding: 30px;
+    padding: 30px 0 100px 0;
     background-color: transparent;
     display: flex;
     justify-content: center;

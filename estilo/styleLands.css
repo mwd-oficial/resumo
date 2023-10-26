@@ -1,5 +1,19 @@
 header {
     padding: 0px 20px;
+    min-height: 66px;
+    justify-content: space-between;
+}
+
+header.header-scroll nav ul li {
+    background-image: none;
+}
+
+#progresso-bar {
+    display: block;
+}
+
+#progresso-circle {
+    display: none;
 }
 
 #sobre-div {

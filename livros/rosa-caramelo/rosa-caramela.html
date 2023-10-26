@@ -11,20 +11,16 @@
     <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
     <title>Rosa Caramela</title>
     <style>
+        :root {
+            --cor-header: #1e1e64bf, #3278ffbf;
+            --cor-progresso: #2222ad;
+        }
+
         body {
             background: url("rosa-caramela.jpg") center center no-repeat fixed;
             background-size: cover;
         }
 
-        header.header-scroll {
-            background-image: linear-gradient(135deg, rgba(30, 30, 100, .75), rgba(50, 120, 255, .75));
-        }
-
-        @media screen and (max-width:1050px) {
-            header.header-scroll nav ul li {
-                background-image: linear-gradient(135deg, rgba(30, 30, 100, .75), rgba(50, 120, 255, .75));
-            }
-        }
     </style>
 </head>
 
@@ -36,9 +32,10 @@
     </div>
     <div id="conteudo">
         <div id="cabeca"></div>
+        <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
         <header>
+            <div id="progresso-bar"></div>
             <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
-            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
             <div class="logo-header">
                 <h1 id="h1-header">Resumo de Livros</h1>
             </div>
@@ -51,8 +48,17 @@
                     <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
                 </ul>
             </nav>
-            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
         </header>
+        <div id="progresso-circle">
+            <div id="btn-menu" onclick="menu()">
+                <span class="material-icons" id="menu-icon">menu</span>
+            </div>
+            <svg id="circular-chart" viewBox="0 0 36 36">
+                <path id="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+        </div>
         <div id="divImg">
             <img src="rosa-caramela.jpg" alt="" class="img-livro" id="img-livro">
         </div>
@@ -117,7 +123,7 @@
         </main>
         <footer>
             <div id="logodiv">
-                <a href="https://github.com/mwd-oficial" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
+                <a href="https://mwd-oficial.github.io/sobre" target="_blank"><img src="../../imagens/logoMWDt.png" alt=""
                         id="logo"></a>
             </div>
         </footer>

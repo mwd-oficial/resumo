@@ -17,7 +17,7 @@
     --link-color: #00f;
     --h2-color: yellow;
     --h3-color: rgb(0, 255, 0);
-    --mark-color: #0ff;  
+    --mark-color: #0ff;
     --lista-livros-color: #ccc;
     --lista-livros-color-hover: #ddd;
 }
@@ -26,9 +26,11 @@
     ::-webkit-scrollbar {
         display: none;
     }
+
     h2 {
         font-size: 1.25em;
     }
+
     h3 {
         font-size: 1.15em;
     }
@@ -47,7 +49,8 @@
     border-radius: 50px;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     max-width: 100vw;
 }
@@ -137,12 +140,15 @@ a {
     text-decoration: none;
     color: var(--link-color);
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 a:active {
     color: var(--link-color);
 }
+
 a:visited {
     color: var(--link-color);
 }
@@ -156,11 +162,10 @@ header {
     top: 0;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    min-height: 66px;
+    min-height: 45px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 50;
     transition-duration: .5s;
@@ -178,7 +183,9 @@ header ul li {
     margin: 0;
 }
 
-header ul li a, header ul li a:visited, header ul li a:active  {
+header ul li a,
+header ul li a:visited,
+header ul li a:active {
     color: #000;
     font-size: 1.1em;
     padding: 20px 15px;
@@ -194,7 +201,8 @@ header ul li a:hover {
     text-decoration: none;
 }
 
-header > nav > ul > li > a, header.header-scroll > nav > ul > li > a {
+header>nav>ul>li>a,
+header.header-scroll>nav>ul>li>a {
     border-radius: 15px;
 }
 
@@ -224,9 +232,14 @@ header.header-scroll #h1-header {
 header.header-scroll {
     backdrop-filter: blur(10px);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+    background-image: linear-gradient(135deg, var(--cor-header));
 }
 
-header.header-scroll .img-livro{
+header.header-scroll nav ul li {
+    background-image: linear-gradient(135deg, var(--cor-header));
+}
+
+header.header-scroll .img-livro {
     display: none !important;
 }
 
@@ -248,7 +261,64 @@ header.header-scroll .img-livro{
     opacity: 0;
 }
 
-#btn-menu, #btn-home, #btn-home-cell {
+header.header-scroll ~ #progresso-circle #btn-menu, header.header-scroll ~ #progresso-bar #btn-menu {
+    background-image: linear-gradient(135deg, var(--cor-header));
+    box-shadow: none;
+}
+
+#progresso-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    max-width: 100vw;
+    background-color: var(--cor-progresso);
+    display: none;
+}
+
+#progresso-circle {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+#circular-chart {
+    position: absolute;
+    display: block;
+    max-width: 75px;
+    max-height: 75px;
+}
+
+#circle {
+    fill: none;
+    stroke: var(--cor-progresso);
+    stroke-width: 3.8;
+    stroke-dasharray: 0, 100;
+}
+
+#btn-menu {
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: .5s;
+    z-index: 2;
+    display: none;
+}
+
+#btn-home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,7 +337,7 @@ header.header-scroll #btn-home {
     transform: translateY(70px);
 }
 
-#btn-home, #btnhome-cell {
+#btn-home {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -281,44 +351,74 @@ header.header-scroll #btn-home {
     transition-duration: .1s;
 }
 
+#btn-home-cell {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: .5s;
+    z-index: 2;
+}
+
 #btn-home a {
     color: black;
 }
-   
-#btn-menu, #btn-home-cell {
+
+#btn-menu,
+#btn-home-cell {
     display: none;
 }
 
-header.header-scroll #btn-menu, header.header-scroll #btn-home-cell {
+header.header-scroll #btn-menu,
+header.header-scroll #btn-home-cell {
     background-color: transparent;
     box-shadow: none;
     border-radius: none;
 }
 
 @media screen and (max-width:1050px) {
-    header ul li a:hover span, header ul li a:not(:hover) span, header ul li a:hover {
+
+    header ul li a:hover span,
+    header ul li a:not(:hover) span,
+    header ul li a:hover {
         transform: none;
     }
+
     #btn-menu {
         display: flex;
     }
+
     #btn-home {
         display: none;
     }
+
     #btn-home-cell {
         display: flex;
     }
+
     #menu-div {
         display: none;
     }
-    
+
     header nav {
         position: absolute;
         width: 100vw;
-        top: 57px;
+        top: 0px;
         left: 0;
     }
-    
+
+    header.header-scroll nav {
+        top: 45px;
+    }
+
     header nav ul li {
         width: 100%;
         background-color: white;
@@ -332,11 +432,12 @@ header.header-scroll #btn-menu, header.header-scroll #btn-home-cell {
         padding: 10px 26px;
         backdrop-filter: brightness(1);
     }
-    
-    header.header-scroll #btn-menu, header.header-scroll #btn-home-cell {
+
+    header.header-scroll #btn-menu,
+    header.header-scroll #btn-home-cell {
         box-shadow: none !important;
     }
-}  
+}
 
 @media screen and (max-width:400px) {
     #h1-header {
@@ -344,7 +445,8 @@ header.header-scroll #btn-menu, header.header-scroll #btn-home-cell {
     }
 }
 
-#btn-menu:hover, #btn-home:hover, #btn-home-cell:hover {
+#btn-home:hover,
+#btn-home-cell:hover {
     transform: scale(1.05);
 }
 
@@ -360,7 +462,7 @@ nav ul li:nth-child(1) {
     position: relative;
     top: 0;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     background-color: #eee;
 }
 
@@ -369,11 +471,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    text-shadow: 
-               -2px -2px 0px #000, 
-               -2px 2px 0px #000,                    
-                2px -2px 0px #000,                  
-                2px 2px 0px #000;
+    text-shadow:
+        -2px -2px 0px #000,
+        -2px 2px 0px #000,
+        2px -2px 0px #000,
+        2px 2px 0px #000;
     text-align: center;
     margin: 40px 0px;
     color: var(--h2-color);
@@ -393,12 +495,19 @@ h3 {
     padding: 0 0 0 10px;
 }
 
+h4 {
+    display: inline-block;
+    padding: 2px;
+    color: #f00;
+    border-bottom: 2px dashed #f00;
+}
+
 mark {
     background-color: transparent;
     font-weight: bolder;
     border: 2px solid var(--mark-color);
-    box-shadow: 
-                inset 0px 0px 20px 0px var(--mark-color);
+    box-shadow:
+        inset 0px 0px 20px 0px var(--mark-color);
     padding: 0 5px;
 }
 
@@ -437,7 +546,7 @@ p {
 
 .down-icon {
     background-color: white;
-    color:var(--link-color);
+    color: var(--link-color);
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -453,12 +562,12 @@ p {
     transform: scale(1.05);
 }
 
-.down-icon:hover ~ a {
+.down-icon:hover~a {
     text-decoration: underline;
 }
 
 footer {
-    padding: 30px;
+    padding: 30px 0 100px 0;
     background-color: transparent;
     display: flex;
     justify-content: center;

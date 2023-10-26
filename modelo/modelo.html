@@ -11,19 +11,14 @@
     <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
     <title></title>
     <style>
+        :root {
+            --cor-header: #ffffffbf, #000000bf;
+            --cor-progresso: #888888;
+        }
+
         body {
             background: url("") center center no-repeat fixed;
             background-size: cover;
-        }
-
-        header.header-scroll {
-            background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75));
-        }
-
-        @media screen and (max-width:1050px) {
-            header.header-scroll nav ul li {
-                background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75));
-            }
         }
     </style>
 </head>
@@ -36,9 +31,11 @@
     </div>
     <div id="conteudo">
         <div id="cabeca"></div>
+        <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span>
+        </div>
         <header>
+            <div id="progresso-bar"></div>
             <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
-            <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
             <div class="logo-header">
                 <h1 id="h1-header">Resumo de Livros</h1>
             </div>
@@ -51,16 +48,25 @@
                     <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
                 </ul>
             </nav>
-            <div id="btn-menu" onclick="menu()"><span class="material-icons" id="menu-icon">menu</span></div>
         </header>
+        <div id="progresso-circle">
+            <div id="btn-menu" onclick="menu()">
+                <span class="material-icons" id="menu-icon">menu</span>
+            </div>
+            <svg id="circular-chart" viewBox="0 0 36 36">
+                <path id="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+        </div>
         <div id="divImg">
             <img src="" alt="" class="img-livro" id="img-livro">
         </div>
         <main>
             <h2 id="down-h2">Acesse o livro aqui</h2>
             <div class="down-link">
-                <div class="down-icon" onclick="window.open('', '_blank')"><span
-                        class="material-icons">download</span></div>
+                <div class="down-icon" onclick="window.open('', '_blank')"><span class="material-icons">download</span>
+                </div>
                 <a href="" target="_blank"></a>
             </div>
             <h2 id="pente">O "PENTE"</h2>

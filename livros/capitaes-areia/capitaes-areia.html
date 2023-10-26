@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../imagens/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilo/livros.css">
+    <link rel="stylesheet" href="../../estilo/styleLands.css" media="screen and (orientation:landscape)">
+    <title>Capitães da Areia</title>
+    <style>
+        :root {
+            --cor-header: #B39D18bf, #919EF4bf;
+            --cor-progresso: #c1e61f;
+        }
+
+        body {
+            background: url("capitaes-areia-img.jpg") center center no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body onload="inicia()">
+    <div id="fundo-pretot" onclick="menu()"></div>
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <div id="cabeca"></div>
+        <div id="btn-home-cell" onclick="location.href='../../index.html'"><span class="material-icons">home</span>
+        </div>
+        <header>
+            <div id="progresso-bar"></div>
+            <div id="btn-home" onclick="location.href='../../index.html'"><span class="material-icons">home</span></div>
+            <div class="logo-header">
+                <h1 id="h1-header">Resumo de Livros</h1>
+            </div>
+            <nav id="menu-div">
+                <ul id="uls-livro">
+                    <li><a href="#cabeca" onclick="menu()">Topo</a></li>
+                    <li><a href="#down-h2" class="abreviar" onclick="menu()">Acesse o livro aqui</a></li>
+                    <li><a href="#pente" onclick="menu()">O "PENTE"</a></li>
+                    <li><a href="#res-cap" class="abreviar" onclick="menu()">Resumo de cada capítulo</a></li>
+                    <li><a href="#analise" class="abreviar" onclick="menu()">Análise</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="progresso-circle">
+            <div id="btn-menu" onclick="menu()">
+                <span class="material-icons" id="menu-icon">menu</span>
+            </div>
+            <svg id="circular-chart" viewBox="0 0 36 36">
+                <path id="circle" stroke-dasharray="100, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+        </div>
+        <div id="divImg">
+            <img src="capitaes-areia-img.jpg" alt="" class="img-livro" id="img-livro">
+        </div>
+        <main>
+            <h2 id="down-h2">Acesse o livro aqui</h2>
+            <div class="down-link">
+                <div class="down-icon" onclick="window.open('capitaes-areia-pdf.pdf', '_blank')"><span
+                        class="material-icons">download</span>
+                </div>
+                <a href="capitaes-areia-pdf.pdf" target="_blank">Capitães da Areia - Jorge Amado.pdf</a>
+            </div>
+            <h2 id="pente">O "PENTE"</h2>
+            <section>
+                <h3>P - Personagens:</h3>
+                <ol>
+                    <h4>Personagens Principais:</h4>
+                    <li><mark>Pedro Bala:</mark> É o líder dos Capitães da Areia, um garoto loiro de 15 anos que tem uma
+                        cicatriz no rosto. É filho de um sindicalista morto pela polícia e tem um espírito rebelde e
+                        corajoso. Apaixona-se por Dora e torna-se um revolucionário comunista no final da obra.</li>
+                    <li><mark>Dora:</mark> É a única menina do grupo, que se junta aos Capitães da Areia depois de fugir
+                        de casa com o irmão Zé Fuinha. É doce, maternal e cuida dos meninos como se fossem seus filhos.
+                        Envolve-se com Pedro Bala e morre de tuberculose no reformatório.</li>
+                    <li><mark>Professor:</mark> É o intelectual do grupo, que gosta de ler e escrever. Rouba livros para
+                        contar histórias aos outros meninos e sonha em ser escritor. É amigo de Pedro Bala e apaixonado
+                        por Dora. No final da obra, torna-se um pintor famoso no Rio de Janeiro.</li>
+                    <li><mark>Gato:</mark> É o melhor amigo de Pedro Bala e o mais bonito do grupo. Tem cabelos ruivos e
+                        olhos verdes e usa seu charme para seduzir as mulheres. É vaidoso, alegre e gosta de música. No
+                        final da obra, torna-se um ator de cinema em Hollywood.</li>
+                    <li><mark>Sem-Pernas:</mark> É um menino que perdeu as pernas em um acidente de trem e usa muletas
+                        para se locomover. É amargurado, invejoso e cruel. Usa sua deficiência para comover as pessoas e
+                        roubá-las. Tem ódio de Pedro Bala e trai o grupo ao denunciá-lo à polícia. Morre queimado no
+                        trapiche.</li>
+
+                    <h4>Personagens Secundários:</h4>
+                    <li><mark>Volta Seca:</li> É um menino que admira Lampião e quer ser cangaceiro. É valente, astuto e
+                    tem uma faca afiada. Faz amizade com Padre José Pedro e Mãe de Santo. No final da obra, foge para o
+                    sertão e entra para o bando de Lampião.</mark>
+                    <li><mark>João Grande:</mark> É um menino negro e forte, que gosta de lutar capoeira. É leal,
+                        bondoso e protege os mais fracos. É amigo de Pedro Bala e Professor. No final da obra, torna-se
+                        marinheiro e viaja pelo mundo.</li>
+                    <li><mark>Pirulito:</mark> É um menino religioso, que reza e vai à missa. É ingênuo, sonhador e tem
+                        medo dos fantasmas do trapiche. É amigo de Dora e Sem-Pernas. No final da obra, torna-se
+                        seminarista e padre.</li>
+                    <li><mark>Boa-Vida:</mark> É um menino preguiçoso, que gosta de dormir e comer. É divertido,
+                        malandro e não se preocupa com nada. É amigo de Gato e Volta Seca. No final da obra, torna-se
+                        dono de uma pensão na Bahia.</li>
+                    <li><mark>Barandão:</mark> É um menino gordo e forte, que gosta de brigar e beber. É violento,
+                        grosseiro e tem fama de valentão. É inimigo de Pedro Bala e Sem-Pernas. No final da obra,
+                        torna-se lutador de boxe.</li>
+
+                    <h4>Personagens Coadjuvantes:</h4>
+                    <li><mark>Padre José Pedro:</mark> É um padre progressista, que simpatiza com os Capitães da Areia e
+                        tenta ajudá-los. É amigo de Volta Seca e Mãe de Santo. No final da obra, muda-se para o sertão
+                        para trabalhar com os pobres.</li>
+                    <li><mark>Mãe de Santo:</mark> É uma mulher negra, que pratica o candomblé e acolhe os Capitães da
+                        Areia em seu terreiro. É amiga de Volta Seca e Padre José Pedro. No final da obra, continua a
+                        exercer sua religião na Bahia.</li>
+                    <li><mark>João de Adão:</mark> É um estivador negro, que conheceu o pai de Pedro Bala e conta ao
+                        garoto sobre sua morte. É amigo dos Capitães da Areia e participa das greves operárias.</li>
+                    <li><mark>Querido-de-Deus:</mark> É um capoeirista negro, que ensina João Grande a lutar. É amigo
+                        dos Capitães da Areia e participa das greves operárias.</li>
+                    <li><mark>Dalva:</mark> É uma prostituta, que se envolve com Gato e o ajuda a fugir da polícia. É
+                        amiga dos Capitães da Areia e mora em um bordel.</li>
+                    <li><mark>Zé Fuinha:</mark> É o irmão de Dora, que foge de casa com ela e se junta aos Capitães da
+                        Areia. É fraco, doente e medroso. Morre de varíola no trapiche.</li>
+                    <li><mark>Almiro:</mark> É um menino do grupo, que também morre de varíola no trapiche.</li>
+                    <li><mark>Orelhudo:</mark> É um menino do grupo, que morre baleado pela polícia em um assalto.
+                    </li>
+                    <li><mark>Caboclo Raimundo:</mark> É o antigo líder dos Capitães da Areia, que foi derrotado por
+                        Pedro Bala em uma luta. É inimigo de Pedro Bala e Barandão. No final da obra, torna-se soldado
+                        da polícia.</li>
+                </ol>
+            </section>
+            <section>
+                <h3>E - Enredo:</h3>
+                <p>O enredo de Capitães da Areia gira em torno da vida de um grupo de meninos de rua que vivem em um
+                    trapiche abandonado no cais de Salvador, na década de 1930. Eles são chamados de Capitães da Areia e
+                    cometem furtos e assaltos para sobreviver. Cada um deles tem uma história de abandono, violência e
+                    sofrimento, mas também de sonhos, amizades e amores. O líder do grupo é Pedro Bala, filho de um
+                    sindicalista morto pela polícia, que se apaixona por Dora, a única menina do bando. Outros
+                    personagens importantes são Professor, Gato, Sem-Pernas, Volta Seca, João Grande, Pirulito, Boa-Vida
+                    e Barandão. A obra mostra as aventuras e desventuras desses meninos, que enfrentam a perseguição da
+                    polícia, a epidemia de varíola, a repressão dos reformatórios e a indiferença da sociedade. No
+                    final, cada um deles segue um destino diferente, alguns trágicos e outros esperançosos.</p>
+            </section>
+            <section>
+                <h3>N - Narrador:</h3>
+                <p>O narrador de Capitães da Areia é onisciente, ou seja, ele sabe tudo sobre os personagens e os fatos
+                    narrados. Ele narra em terceira pessoa e tem uma postura crítica em relação à realidade social que
+                    retrata. Ele também usa recursos como cartas, reportagens e depoimentos para dar mais
+                    verossimilhança à história.</p>
+            </section>
+            <section>
+                <h3>T - Tempo:</h3>
+                <p>O tempo da narrativa é cronológico, ou seja, segue a ordem dos acontecimentos conforme eles ocorrem.
+                    A obra se passa na década de 1930, no contexto histórico da Era Vargas e do Estado Novo. Há também o
+                    tempo psicológico, que é marcado pelas lembranças e emoções dos personagens.</p>
+            </section>
+            <section>
+                <h3>E - Espaço/Lugar:</h3>
+                <p>O espaço da narrativa é Salvador, capital da Bahia. A obra mostra os contrastes entre as diferentes
+                    regiões da cidade, como o cais do porto, onde fica o trapiche dos Capitães da Areia; o mercado, onde
+                    eles roubam comida e objetos; o Corredor da Vitória, onde ficam as mansões dos ricos; o Pelourinho,
+                    onde fica o bordel de Dalva; e o terreiro de Don'Aninha, onde eles participam dos rituais do
+                    candomblé. O espaço também revela a cultura e a identidade baianas, com suas influências africanas,
+                    religiosas e populares.</p>
+            </section>
+            <section>
+                <h2 id="res-cap">Resumo detalhado de cada capítulo</h2>
+                <ol>
+                    <h3>Sob a lua, num velho trapiche abandonado</h3>
+                    <li>
+                        <mark>O trapiche:</mark> Neste capítulo, o autor apresenta o cenário onde vivem os Capitães da
+                        Areia, um velho trapiche abandonado no cais do porto de Salvador. O trapiche é o refúgio e a
+                        casa dos meninos, que o defendem de invasores e o enfeitam com objetos roubados. O autor também
+                        descreve as características físicas e psicológicas dos principais personagens do grupo: Pedro
+                        Bala, o líder; Professor, o intelectual; Gato, o galã; Sem-Pernas, o aleijado; Volta Seca, o
+                        admirador de Lampião; João Grande, o capoeirista; Pirulito, o religioso; Boa-Vida, o preguiçoso;
+                        e Barandão, o valentão.
+                    </li>
+                    <li> <mark>Noite dos Capitães da Areia:</mark> Neste capítulo, o autor narra uma noite típica dos
+                        Capitães da Areia, que se reúnem no trapiche para contar histórias, brincar, fumar, jogar dados
+                        e planejar roubos. O autor mostra a linguagem coloquial e popular dos meninos, bem como seus
+                        valores e sentimentos. O autor também revela a origem de alguns personagens, como Pedro Bala,
+                        que é filho de um sindicalista morto pela polícia; Professor, que é órfão de pai e mãe; e
+                        Sem-Pernas, que perdeu as pernas em um acidente de trem. </li>
+                    <li> <mark>Ponto das Pitangueiras:</mark> Neste capítulo, o autor relata uma das aventuras dos
+                        Capitães da Areia, que consiste em roubar mangas no quintal de uma casa no Corredor da Vitória,
+                        uma área nobre da cidade. O autor contrasta a miséria dos meninos com a riqueza dos moradores da
+                        casa, que têm uma vida confortável e tranquila. O autor também mostra a astúcia e a coragem dos
+                        meninos, que conseguem escapar da perseguição do dono da casa e de seus cachorros. </li>
+                    <li> <mark>As luzes do carrossel:</mark> Neste capítulo, o autor conta como os Capitães da Areia se
+                        encantam com a chegada de um carrossel mambembe na cidade. O autor mostra a inocência e a
+                        alegria dos meninos, que se divertem com as luzes, as músicas e os brinquedos do carrossel. O
+                        autor também introduz dois novos personagens na história: Dora e Zé Fuinha, dois irmãos que
+                        fogem de casa e se juntam aos Capitães da Areia. Dora é a única menina do grupo e desperta o
+                        interesse de Pedro Bala e Professor. </li>
+                    <li> <mark>Docas:</mark> Neste capítulo, o autor descreve as docas do porto de Salvador, onde os
+                        Capitães da Areia costumam roubar mercadorias dos navios e dos armazéns. O autor mostra a
+                        habilidade e a ousadia dos meninos, que se arriscam entre os guindastes, as cordas e as caixas.
+                        O autor também destaca a amizade entre Pedro Bala e Gato, que são os melhores amigos do grupo e
+                        compartilham suas confidências. </li>
+                    <li> <mark>Aventura de Ogum:</mark> Neste capítulo, o autor narra uma das façanhas mais audaciosas
+                        dos Capitães da Areia, que consiste em roubar um carro na frente de uma igreja. O autor mostra a
+                        influência da religião africana na cultura baiana, pois os meninos invocam Ogum, o orixá da
+                        guerra e do ferro, para protegê-los. O autor também mostra a rivalidade entre Pedro Bala e
+                        Barandão, que disputam a liderança do grupo e a posse do carro. </li>
+                    <li> <mark>Deus sorri como um negrinho:</mark> Neste capítulo, o autor relata como os Capitães da
+                        Areia são acolhidos por Mãe de Santo, uma mulher negra que pratica o candomblé em seu terreiro.
+                        O autor mostra o respeito e a admiração dos meninos pela religião afro-brasileira, que lhes
+                        oferece conforto espiritual e material. O autor também mostra a amizade entre Volta Seca e Mãe
+                        de Santo, que se identificam pela fé em Lampião e nos orixás. </li>
+                    <li> <mark>O menino da faca:</mark> Neste capítulo, o autor conta a história de Volta Seca, um dos
+                        personagens mais valentes e astutos do grupo. O autor mostra como Volta Seca se tornou um
+                        admirador de Lampião, o famoso cangaceiro do sertão, e como ele usa sua faca para se defender e
+                        atacar. O autor também mostra como Volta Seca se envolve com uma mulher casada, que o trai e o
+                        entrega à polícia. </li>
+                    <li> <mark>A fuga:</mark> Neste capítulo, o autor narra como Volta Seca consegue fugir da prisão,
+                        com a ajuda de Padre José Pedro, um padre progressista que simpatiza com os Capitães da Areia. O
+                        autor mostra a coragem e a inteligência de Volta Seca, que se disfarça de padre e engana os
+                        guardas. O autor também mostra a bondade e a generosidade de Padre José Pedro, que arrisca sua
+                        vida e sua reputação para salvar o menino. </li>
+                    <li> <mark>A cidade dorme:</mark> Neste capítulo, o autor descreve a cidade de Salvador à noite,
+                        quando os Capitães da Areia saem para suas aventuras. O autor mostra a diversidade e a beleza da
+                        cidade, que tem desde as igrejas barrocas até os bares boêmios. O autor também mostra as
+                        diferentes atividades dos meninos, que vão desde o roubo até o amor. </li>
+                    <li> <mark>O bando:</mark> Neste capítulo, o autor resume as principais características dos Capitães
+                        da Areia, que formam um bando unido e solidário. O autor mostra como os meninos se organizam, se
+                        protegem, se divertem e se educam. O autor também mostra como os meninos são vistos pela
+                        sociedade, que os teme e os despreza. </li>
+                </ol>
+
+                <h3>Noite da grande paz, da grande paz dos teus olhos</h3>
+                <ol>
+                    <li> <mark>Dora, mãe dos Capitães da Areia:</mark> Neste capítulo, o autor mostra como Dora se torna
+                        a única menina do grupo e assume um papel maternal para os meninos. O autor mostra como Dora
+                        cuida da saúde, da higiene, da alimentação e da educação dos Capitães da Areia, que a respeitam
+                        e a amam. O autor também mostra como Dora se aproxima de Pedro Bala e Professor, que se
+                        apaixonam por ela. </li>
+                    <li> <mark>O amor de Pedro Bala e Dora:</mark> Neste capítulo, o autor narra o romance entre Pedro
+                        Bala e Dora, que se tornam namorados e vivem uma relação de amor e cumplicidade. O autor mostra
+                        como Pedro Bala e Dora se protegem, se apoiam, se divertem e se entregam um ao outro. O autor
+                        também mostra como Professor sofre com o amor não correspondido por Dora, mas respeita a escolha
+                        dela. </li>
+                    <li> <mark>O reformatório:</mark> Neste capítulo, o autor relata como Pedro Bala e Dora são
+                        capturados pela polícia quando tentam roubar uma mansão e são enviados para o reformatório, um
+                        lugar de tortura e humilhação para os menores infratores. O autor mostra como Pedro Bala e Dora
+                        sofrem com a violência, a fome, o frio e a saudade dos Capitães da Areia. O autor também mostra
+                        como Pedro Bala lidera uma rebelião contra os guardas e consegue fugir com Dora e outros
+                        meninos. </li>
+                    <li> <mark>A morte de Dora:</mark> Neste capítulo, o autor conta como Dora adoece de tuberculose
+                        depois de sair do reformatório e é levada para o orfanato das freiras. O autor mostra como Pedro
+                        Bala visita Dora todos os dias e tenta animá-la com presentes e promessas. O autor também mostra
+                        como Dora piora cada vez mais e morre nos braços de Pedro Bala, que fica desolado. </li>
+                    <li> <mark>O enterro de Dora:</mark> Neste capítulo, o autor descreve o enterro de Dora, que é
+                        acompanhado pelos Capitães da Areia e por Padre José Pedro. O autor mostra como os meninos
+                        choram pela morte de Dora e como Padre José Pedro faz uma oração por ela. O autor também mostra
+                        como Pedro Bala fica inconsolável e decide vingar-se da sociedade que matou sua amada. </li>
+                    <li> <mark>A fuga de Pedro Bala:</mark> Neste capítulo, o autor narra como Pedro Bala foge do
+                        trapiche depois do enterro de Dora e se junta aos revolucionários comunistas que lutam contra o
+                        governo de Getúlio Vargas. O autor mostra como Pedro Bala usa sua coragem, sua inteligência e
+                        sua liderança para participar das ações armadas dos rebeldes. O autor também mostra como Pedro
+                        Bala mantém contato com os Capitães da Areia por meio de cartas. </li>
+                    <li> <mark>A carta de Pedro Bala:</mark> Neste capítulo, o autor reproduz uma carta que Pedro Bala
+                        escreve para os Capitães da Areia, contando sobre sua nova vida como revolucionário. O autor
+                        mostra como Pedro Bala explica seus ideais políticos, seus planos de luta, seus perigos e suas
+                        esperanças. O autor também mostra como Pedro Bala expressa seu carinho pelos meninos, sua
+                        saudade de Dora e seu orgulho de ser um Capitão da Areia. </li>
+                    <li> <mark>O carrossel:</mark> Neste capítulo, o autor encerra a segunda parte do livro com uma cena
+                        simbólica em que os Capitães da Areia voltam ao carrossel onde conheceram Dora. O autor mostra
+                        como os meninos se lembram de Dora com emoção e como eles se divertem com as luzes, as músicas e
+                        os brinquedos do carrossel. O autor também mostra como os meninos percebem que estão crescendo e
+                        que terão que enfrentar novos desafios na vida. </li>
+                </ol>
+
+                <h3>Canções da Bahia, das capoeiras, dos saveiros</h3>
+                <ol>
+                    <li> <mark>João Grande, o negro-ginga:</mark> Neste capítulo, o autor mostra o destino de João
+                        Grande, um dos personagens mais fortes e leais do grupo. O autor mostra como João Grande se
+                        torna um mestre de capoeira, ensinando a arte da luta aos outros meninos. O autor também mostra
+                        como João Grande se alista na marinha e viaja pelo mundo, conhecendo novas culturas e lugares.
+                    </li>
+                    <li> <mark>Volta Seca, admirador de Lampião:</mark> Neste capítulo, o autor conta o destino de Volta
+                        Seca, um dos personagens mais valentes e astutos do grupo. O autor mostra como Volta Seca
+                        realiza seu sonho de ser cangaceiro, seguindo os passos de Lampião, seu ídolo. O autor também
+                        mostra como Volta Seca se torna um dos homens de confiança de Lampião e participa de vários
+                        combates contra as forças do governo. </li>
+                    <li> <mark>Gato, o artista do bando:</mark> Neste capítulo, o autor narra o destino de Gato, um dos
+                        personagens mais bonitos e charmosos do grupo. O autor mostra como Gato usa seu talento para a
+                        música e a dança para se tornar um artista famoso. O autor também mostra como Gato se envolve
+                        com Dalva, uma prostituta que o ajuda a fugir da polícia, e como ele vai para Hollywood, onde se
+                        torna um astro de cinema. </li>
+                    <li> <mark>Pirulito, o aspirante a padre:</mark> Neste capítulo, o autor relata o destino de
+                        Pirulito, um dos personagens mais religiosos e ingênuos do grupo. O autor mostra como Pirulito
+                        segue sua vocação para o sacerdócio, entrando para o seminário e estudando teologia. O autor
+                        também mostra como Pirulito se torna um padre bondoso e caridoso, que ajuda os pobres e os
+                        órfãos. </li>
+                    <li> <mark>Boa-Vida, o malandro feliz:</mark> Neste capítulo, o autor descreve o destino de
+                        Boa-Vida, um dos personagens mais preguiçosos e divertidos do grupo. O autor mostra como
+                        Boa-Vida continua a levar uma vida de malandro, sem se preocupar com nada. O autor também mostra
+                        como Boa-Vida se torna dono de uma pensão na Bahia, onde recebe seus antigos companheiros e
+                        conta suas histórias. </li>
+                    <li> <mark>Barandão, o valentão do cais:</mark> Neste capítulo, o autor revela o destino de
+                        Barandão, um dos personagens mais violentos e grosseiros do grupo. O autor mostra como Barandão
+                        continua a brigar e a beber, sem respeitar ninguém. O autor também mostra como Barandão se torna
+                        um lutador de boxe profissional, mas acaba sendo derrotado por um adversário mais jovem e ágil.
+                    </li>
+                    <li> <mark>Professor, o escritor dos Capitães da Areia:</mark> Neste capítulo, o autor apresenta o
+                        destino de Professor, um dos personagens mais inteligentes e sensíveis do grupo. O autor mostra
+                        como Professor realiza seu sonho de ser escritor, publicando livros sobre os Capitães da Areia e
+                        sobre a Bahia. O autor também mostra como Professor se casa com uma moça rica e bonita, mas
+                        nunca esquece seu amor por Dora. </li>
+                    <li> <mark>Sem-Pernas, o ódio pelos Capitães da Areia:</mark> Neste capítulo, o autor expõe o
+                        destino de Sem-Pernas, um dos personagens mais amargurados e cruéis do grupo. O autor mostra
+                        como Sem-Pernas trai os Capitães da Areia, denunciando-os à polícia e recebendo uma recompensa.
+                        O autor também mostra como Sem-Pernas morre queimado no trapiche pelos próprios meninos que ele
+                        traiu. </li>
+                    <li> <mark>Pedro Bala, o chefe dos Capitães da Areia:</mark> Neste capítulo, o autor resume o
+                        destino de Pedro Bala, o personagem principal e líder do grupo. O autor mostra como Pedro Bala
+                        se torna um revolucionário comunista, lutando contra a ditadura de Getúlio Vargas e pela
+                        libertação do povo. O autor também mostra como Pedro Bala mantém sua amizade com os Capitães da
+                        Areia, visitando-os sempre que pode e enviando-lhes cartas. </li>
+                    <li> <mark>Os Capitães da Areia:</mark> Neste capítulo, o autor encerra o livro com uma cena em que
+                        os Capitães da Areia se reencontram no trapiche, depois de muitos anos. O autor mostra como os
+                        meninos, agora homens, se abraçam, se emocionam e se recordam de suas aventuras e de seus
+                        companheiros que se foram. O autor também mostra como os meninos, apesar de terem seguido
+                        caminhos diferentes, continuam sendo os Capitães da Areia, um bando unido e solidário. </li>
+                </ol>
+            </section>
+            <section>
+                <h2 id="analise">Análise Completa e Detalhada</h2>
+                <p>“Capitães da Areia”, de Jorge Amado, é uma obra que retrata o cotidiano de um grupo de meninos de rua, mostrando não apenas os assaltos e as atitudes violentas de sua vida bestializada, mas também as aspirações e os pensamentos ingênuos, comuns a qualquer criança.</p>
+                <p>O romance começa com uma reportagem fictícia intitulada “Crianças ladronas”, que narra um assalto à casa de um rico negociante. O crime foi praticado pelos Capitães da Areia, descritos como "o grupo de meninos assaltantes e ladrões que infestam a nossa urbe". A introdução apresenta uma sequência de cartas de leitores do jornal, que revelam o descaso social com os meninos de rua.</p>
+                <p>A obra é um painel de situações sociais comuns ao universo literário criado por Jorge Amado. Publicado em 1937, o livro deixou sua marca na história cultural brasileira, retratando a situação de um grupo de jovens em situação de abandono nas ruas da capital baiana. Os jovens são embalsamados pelo determinismo de suas condições desde o nascimento, crescendo pelas ruas da cidade cometendo delitos para garantir a sobrevivência numa selva urbana ainda em formatação.</p>
+                <p>A história dos Capitães da Areia é poética e romântica, mas também uma denúncia social e uma crítica aos dogmas cristãos e ao descaso dos ricos para com os pobres. A obra revela uma situação social real, enquanto as notícias veiculadas pela mídia, que muitas vezes atendem aos interesses das classes sociais mais ricas, podem estar permeadas de elementos mentirosos.</p>
+                <p>O enredo busca apresentar os Capitães da Areia, revelando a personalidade de cada integrante do grupo, suas ambições e frustrações. Alguns garotos têm finais trágicos, como a morte e a cadeia, outros continuam no mundo do crime. Existem ainda aqueles que conseguem mudar suas vidas, seguindo outros ofícios como a política, a arte e até o sacerdócio.</p>
+                <p>Em resumo, “Capitães da Areia” é uma obra-prima que oferece uma visão crítica da desigualdade social e do abandono das crianças nas ruas. É uma história triste porque pode ser real.</p>
+            </section>
+        </main>
+        <footer>
+            <div id="logodiv">
+                <a href="https://mwd-oficial.github.io/sobre" target="_blank"><img src="../../imagens/logoMWDt.png"
+                        alt="" id="logo"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script>
+        var header = document.querySelector("header")
+        var imgLivro = document.querySelector("#img-livro")
+        document.addEventListener("scroll", function () {
+            header.classList.toggle("header-scroll", window.scrollY > 0)
+            imgLivro.classList.toggle("img-scroll", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>

@@ -31,19 +31,11 @@ function menu() {
             menuIcon.innerHTML = "close"
             menuDiv.style.display = "block"
             fundoPretot.style.display = "block"
-            btnMenu.style.boxShadow = "none"
-            btnMenu.style.borderRadius = "50% 50% 0px 0px"
-            btnHome.style.boxShadow = "none"
-            btnHome.style.borderRadius = "50% 50% 0px 0px"
 
         } else if (menuIcon.innerHTML == "close") {
             menuIcon.innerHTML = "menu"
             menuDiv.style.display = "none"
             fundoPretot.style.display = "none"
-            btnMenu.style.boxShadow = "5px 5px 10px 0px rgba(0, 0, 0, .5)"
-            btnMenu.style.borderRadius = "50%"
-            btnHome.style.boxShadow = "5px 5px 10px 0px rgba(0, 0, 0, .5)"
-            btnHome.style.borderRadius = "50%"
             for (let i = 0; i < uls.length; i++) {
                 uls[i].style.display = "none"
             }
@@ -60,15 +52,11 @@ function menuHeader() {
             fundoPretot.style.display = "block"
             menuIcon.innerHTML = "close"
             navAnos.style.display = "block"
-            btnMenuHeader.style.boxShadow = "none"
-            btnMenuHeader.style.borderRadius = "50% 50% 0px 0px"
 
         } else if (menuIcon.innerHTML == "close") {
             fundoPretot.style.display = "none"
             menuIcon.innerHTML = "menu"
             navAnos.style.display = "none"
-            btnMenuHeader.style.boxShadow = "5px 5px 10px 0px rgba(0, 0, 0, .5)"
-            btnMenuHeader.style.borderRadius = "50%"
             for (let i = 0; i < uls.length; i++) {
                 uls[i].style.display = "none"
                 zoom[i].style.fontSize = "16px"
@@ -88,7 +76,6 @@ function menuScroll() {
     }
 }
 
-
 function scrollToElement(elementId, offset) {
     const element = document.getElementById(elementId);
     const topPos = element.getBoundingClientRect().top + window.scrollY;
@@ -97,6 +84,15 @@ function scrollToElement(elementId, offset) {
         behavior: 'smooth'
     });
 }
+
+var progressoCircle = document.querySelector("#circle");
+var progressoBar = document.querySelector("#progresso-bar");
+window.addEventListener("scroll", function() {
+  var alturaTotal = document.body.scrollHeight - window.innerHeight;
+  var progressoAtual = (window.scrollY / alturaTotal) * 100;
+  progressoCircle.style.strokeDasharray = `${progressoAtual},100`
+  progressoBar.style.width = `${progressoAtual}%`
+});
 
 const links = document.querySelectorAll('a[href^="#"]');
 links.forEach(link => {
